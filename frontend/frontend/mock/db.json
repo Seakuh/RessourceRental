@@ -1,0 +1,439 @@
+{
+  "Furtwangen": [{}, {}, {}],
+
+  "Mannheim": [{}, {}, {}],
+
+  "Stuttgart": [{}, {}, {}],
+
+  "Stockholm": [{}, {}, {}],
+
+  "hfu": [
+    {
+      "id": 1958,
+      "shortname": "F1.03",
+      "name": "Vorlesungs-/ Seminarraum",
+      "seats": 97,
+      "bshortname": "F_F"
+    },
+    {
+      "id": 346,
+      "shortname": "FU A2.01",
+      "name": "?",
+      "seats": 72,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 348,
+      "shortname": "FU A2.03",
+      "name": "?",
+      "seats": 40,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 350,
+      "shortname": "FU A2.05",
+      "name": "?",
+      "seats": 45,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 352,
+      "shortname": "FU A2.07",
+      "name": "Hörsaal",
+      "seats": 45,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 400,
+      "shortname": "FU A3.11",
+      "name": "?",
+      "seats": 90,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 402,
+      "shortname": "FU A3.13",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 409,
+      "shortname": "FU A3.20",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 411,
+      "shortname": "FU A3.22",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_A"
+    },
+    {
+      "id": 67,
+      "shortname": "FU B1.14a",
+      "name": "Aula",
+      "seats": 97,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 70,
+      "shortname": "FU B1.15",
+      "name": "Besprechung",
+      "seats": 0,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 83,
+      "shortname": "FU B1.23",
+      "name": "Seminarraum",
+      "seats": 40,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 89,
+      "shortname": "FU B1.29",
+      "name": "Besprechungsraum",
+      "seats": 0,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 92,
+      "shortname": "FU B1.32",
+      "name": "Hörsaal",
+      "seats": 60,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 118,
+      "shortname": "FU B2.04",
+      "name": "Hörsaal",
+      "seats": 56,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 123,
+      "shortname": "FU B2.09",
+      "name": "Hörsaal",
+      "seats": 80,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 142,
+      "shortname": "FU B3.01",
+      "name": "Hörsaal",
+      "seats": 56,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 146,
+      "shortname": "FU B3.05",
+      "name": "Hörsaal",
+      "seats": 56,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 153,
+      "shortname": "FU B4.01",
+      "name": "Hörsaal",
+      "seats": 56,
+      "bshortname": "F_B"
+    },
+    {
+      "id": 432,
+      "shortname": "FU C0.01",
+      "name": "?",
+      "seats": 92,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 433,
+      "shortname": "FU C0.02",
+      "name": "?",
+      "seats": 40,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 435,
+      "shortname": "FU C0.04",
+      "name": "?",
+      "seats": 90,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 439,
+      "shortname": "FU C0.08",
+      "name": "?",
+      "seats": 50,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 440,
+      "shortname": "FU C0.09",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 447,
+      "shortname": "FU C0.12",
+      "name": "?",
+      "seats": 45,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 448,
+      "shortname": "FU C0.13",
+      "name": "?",
+      "seats": 45,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 449,
+      "shortname": "FU C0.14",
+      "name": "?",
+      "seats": 45,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 495,
+      "shortname": "FU C2.05",
+      "name": "?",
+      "seats": 0,
+      "bshortname": "F_C"
+    },
+    {
+      "id": 819,
+      "shortname": "FU G0.03",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_G"
+    },
+    {
+      "id": 820,
+      "shortname": "FU G0.04",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_G"
+    },
+    {
+      "id": 822,
+      "shortname": "FU G0.08",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_G"
+    },
+    {
+      "id": 823,
+      "shortname": "FU G0.09",
+      "name": "?",
+      "seats": 56,
+      "bshortname": "F_G"
+    },
+    {
+      "id": 601,
+      "shortname": "FU H0.05",
+      "name": "Hörsaal",
+      "seats": 0,
+      "bshortname": "F_H"
+    },
+    {
+      "id": 1468,
+      "shortname": "FU I0.13",
+      "name": "Hörsaal flach",
+      "seats": 48,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1469,
+      "shortname": "FU I0.14",
+      "name": "Hörsaal flach",
+      "seats": 0,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1470,
+      "shortname": "FU I0.15",
+      "name": "Hörsaal flach",
+      "seats": 0,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1471,
+      "shortname": "FU I0.16",
+      "name": "Hörsaal gestuft",
+      "seats": 0,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1472,
+      "shortname": "FU I0.17",
+      "name": "Hörsaal gestuft",
+      "seats": 0,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1500,
+      "shortname": "FU I1.20",
+      "name": "Labor Projektstudien",
+      "seats": 24,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1528,
+      "shortname": "FU I2.14",
+      "name": "?",
+      "seats": 0,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1533,
+      "shortname": "FU I2.18",
+      "name": "?",
+      "seats": 32,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1534,
+      "shortname": "FU I2.19",
+      "name": "?",
+      "seats": 32,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 1536,
+      "shortname": "FU I2.21",
+      "name": "Hörsaal",
+      "seats": 32,
+      "bshortname": "F_I"
+    },
+    {
+      "id": 778,
+      "shortname": "FU L1.05a",
+      "name": "Hörsaal",
+      "seats": 40,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 780,
+      "shortname": "FU L1.06a",
+      "name": "Hörsaal",
+      "seats": 42,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 786,
+      "shortname": "FU L1.10",
+      "name": "Projektraum",
+      "seats": 0,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 2496,
+      "shortname": "FU L1.15",
+      "name": "Seminarraum",
+      "seats": 0,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 800,
+      "shortname": "FU L2.05a",
+      "name": "Hörsaal",
+      "seats": 40,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 806,
+      "shortname": "FU L2.09",
+      "name": "Spielelabor",
+      "seats": 0,
+      "bshortname": "F_L"
+    },
+    {
+      "id": 2512,
+      "shortname": "Jahnhalle",
+      "name": "Jahnhalle",
+      "seats": 160,
+      "bshortname": "Jahnhalle"
+    },
+    {
+      "id": 1755,
+      "shortname": "O0.07",
+      "name": "Hörsaal",
+      "seats": 54,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 1758,
+      "shortname": "O0.10",
+      "name": "Hörsaal",
+      "seats": 96,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 1759,
+      "shortname": "O0.11",
+      "name": "Hörsaal",
+      "seats": 48,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 1775,
+      "shortname": "O1.01",
+      "name": "Labor",
+      "seats": 42,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 1778,
+      "shortname": "O1.04",
+      "name": "Hörsaal",
+      "seats": 96,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 1779,
+      "shortname": "O1.05",
+      "name": "Hörsaal",
+      "seats": 72,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 2849,
+      "shortname": "O1.27",
+      "name": "Hörsaal",
+      "seats": 0,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 2850,
+      "shortname": "O1.28",
+      "name": "Ergonimielabor",
+      "seats": 0,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 2851,
+      "shortname": "O1.29",
+      "name": "Seminarraum",
+      "seats": 0,
+      "bshortname": "F_O"
+    },
+    {
+      "id": 2591,
+      "shortname": "P0.05",
+      "name": "Hörsaal 2",
+      "seats": 27,
+      "bshortname": "F_ P"
+    },
+    {
+      "id": 2593,
+      "shortname": "P0.07",
+      "name": "Hörsaal 1",
+      "seats": 100,
+      "bshortname": "F_ P"
+    }
+  ]
+}
