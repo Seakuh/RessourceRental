@@ -1,5 +1,4 @@
-import { Button } from "@material-ui/core";
-import Stack from "@mui/material/Stack";
+import { Button, Stack } from "@material-ui/core";
 import React, { FC, useState } from "react";
 import styled from "styled-components";
 import { generateRooms } from "../mock/mockRessources";
@@ -8,7 +7,6 @@ import CalendarComponent from "./calender-component";
 import DeviceComponent from "./device-component";
 import RoomComponent from "./room-component";
 import RoomDetailComponent from "./room-detail-component";
-import SeachRessourceBar from "./search-ressource-bar";
 
 export const RootComponent: FC = () => {
   const generatedRooms = generateRooms();
@@ -34,7 +32,7 @@ export const RootComponent: FC = () => {
   return (
     <RootComponentContainer className="RootComponent">
       <header className="RootComponent-header"></header>
-      <SeachRessourceBar searchRessource={searchRessource}></SeachRessourceBar>
+      {/* <SeachRessourceBar searchRessource={searchRessource}></SeachRessourceBar> */}
       <SelectionContainer>
         <RoomComponent
           rooms={rooms}

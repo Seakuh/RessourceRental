@@ -1,17 +1,17 @@
-import { List, ListItemText, makeStyles, withStyles } from "@material-ui/core";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import React, { FC, useState } from "react";
+import { List, ListItem, ListItemText, makeStyles } from "@material-ui/core";
+import React, { FC } from "react";
 import styled from "styled-components";
 import { Room } from "../utils/types";
-import MuiListItem from "@material-ui/core/ListItem";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-    maxWidth: 360,
-    backgroundColor: theme.palette.background.paper,
-  },
-}));
+const useStyles = makeStyles(
+  (theme: { palette: { background: { paper: any } } }) => ({
+    root: {
+      width: "100%",
+      maxWidth: 360,
+      backgroundColor: theme.palette.background.paper,
+    },
+  })
+);
 
 interface RoomListProps {
   rooms: Room[];
@@ -19,7 +19,6 @@ interface RoomListProps {
 }
 
 export const RoomList: FC<RoomListProps> = (props) => {
-  const classes = useStyles();
   const [selectedIndex, setSelectedIndex] = React.useState(1);
   const rooms = props.rooms;
   console.log(rooms);
@@ -52,33 +51,6 @@ export const RoomList: FC<RoomListProps> = (props) => {
     </List>
   );
 };
-
-const ListItem = withStyles({
-  root: {
-    "&$selected": {
-      backgroundColor: "#f000b4",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white",
-      },
-    },
-    "&$selected:hover": {
-      backgroundColor: "#f000b4",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white",
-      },
-    },
-    "&:hover": {
-      backgroundColor: "#f000b4",
-      color: "white",
-      "& .MuiListItemIcon-root": {
-        color: "white",
-      },
-    },
-  },
-  selected: {},
-})(MuiListItem);
 
 const RoomContainer = styled.div``;
 

@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import Web3 from "web3";
+// import Web3 from "web3";
 import RootComponent from "./components/root-component";
 
 export const App: FC = () => {
-  const web3 = new Web3(
-    new Web3.providers.HttpProvider("http://localhost:7545")
-  );
+  // const web3 = new Web3(
+  //   new Web3.providers.HttpProvider("http://localhost:7545")
+  // );
 
   // const accounts = await web3.eth.getAccounts();
   // const networkId = await web3.eth.net.getId();

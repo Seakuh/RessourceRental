@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import Calendar from "react-calendar";
+// import Calendar from "react-calendar";
 import styled from "styled-components";
 
 interface CalendarComponentProps {}
@@ -7,17 +7,15 @@ interface CalendarComponentProps {}
 export const CalendarComponent: FC<CalendarComponentProps> = (props) => {
   const [value, onChange] = useState(new Date());
 
-    
-
   return (
     <div className="App">
       <header className="App-header"></header>
       <CalendarContainer>
-        <Calendar
+        {/* <Calendar
           onChange={onChange}
           value={value}
           minDate={new Date(Date.now())}
-        />
+        /> */}
       </CalendarContainer>
     </div>
   );
