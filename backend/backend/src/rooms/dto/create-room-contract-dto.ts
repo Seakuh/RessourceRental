@@ -1,4 +1,4 @@
-export class Room {
+export class CreateRoomContractDto {
   renter: string;
   roomId: string;
   capacity: number;
@@ -6,7 +6,4 @@ export class Room {
   size: number;
   location: string;
   maxRentTime: number;
-  //
-  //   requiredSafetyBriefing?: SafetyBriefing[];
-  //   devices?: Device[];
 }

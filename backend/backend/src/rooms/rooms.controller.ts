@@ -1,7 +1,16 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
-import { RoomsService } from './rooms.service';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
+import { CreateRoomContractDto } from './dto/create-room-contract-dto';
 import { CreateRoomDto } from './dto/create-room.dto';
 import { UpdateRoomDto } from './dto/update-room.dto';
+import { RoomsService } from './rooms.service';
 
 @Controller('rooms')
 export class RoomsController {
@@ -12,6 +21,11 @@ export class RoomsController {
     return this.roomsService.create(createRoomDto);
   }
 
+  @Post()
+  createRoomContract(@Body() createRoomDto: CreateRoomContractDto) {
+    return 'Wir machen jetzt einen neuen contract';
+  }
+
   @Get()
   findAll() {
     return this.roomsService.findAll();
@@ -20,6 +34,11 @@ export class RoomsController {
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.roomsService.findOne(+id);
+  }
+
+  @Get('/location/:location')
+  findByLocation(@Param('location') locationInput: string) {
+    return this.roomsService.findyManyByLocation(locationInput);
   }
 
   @Patch(':id')
