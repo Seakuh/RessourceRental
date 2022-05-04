@@ -39,4 +39,16 @@ export class DevicesController {
   remove(@Param('id') id: string) {
     return this.devicesService.remove(+id);
   }
+
+  @Post()
+  createDevice() {
+    return 'device created';
+  }
+
+  @Post('')
+  isDeviceAvalable() {
+    return 'is Avalable';
+  }
+
+  
 }

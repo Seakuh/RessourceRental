@@ -7,7 +7,7 @@ export type DeviceDocument = Device & Document;
 export class Device {
   @Prop()
   deviceId: number;
-  @Prop()
+  @Prop({ required: true })
   deviceName: string;
   @Prop()
   loanable: boolean;
@@ -15,11 +15,11 @@ export class Device {
   loanInterval: number;
   @Prop()
   deviceElectricityCostPerHour?: number;
-  @Prop()
+  @Prop({ required: true })
   deviceCosts: number;
   @Prop()
   computingPower?: number;
-  @Prop()
+  @Prop({ required: true })
   buyOut?: boolean;
   @Prop()
   appraisedValue: number;
