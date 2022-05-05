@@ -7,7 +7,6 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { CreateRoomContractDto } from './dto/create-room-contract-dto';
 import { CreateRoomDto } from './dto/create-room.dto';
 import { UpdateRoomDto } from './dto/update-room.dto';
 import { RoomsService } from './rooms.service';
@@ -19,16 +18,6 @@ export class RoomsController {
   @Post()
   create(@Body() createRoomDto: CreateRoomDto) {
     return this.roomsService.create(createRoomDto);
-  }
-
-  @Post()
-  createRoomContract(@Body() createRoomDto: CreateRoomContractDto) {
-    return 'Wir machen jetzt einen neuen contract';
-  }
-
-  @Post()
-  checkIsRoomFree(@Body() createRoomDto: CreateRoomContractDto) {
-    return 'Wir machen jetzt einen neuen contract';
   }
 
   @Get(':id')

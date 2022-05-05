@@ -8,6 +8,9 @@ import { Device } from './entities/device.entity';
 
 @Injectable()
 export class DevicesService {
+  findyManyByLocation(locationInput: string) {
+    throw new Error('Method not implemented.');
+  }
   constructor(
     @InjectModel(Device.name) private deviceModel: Model<DeviceDocument>,
   ) {}

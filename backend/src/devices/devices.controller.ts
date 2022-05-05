@@ -45,18 +45,8 @@ export class DevicesController {
     return 'device created';
   }
 
-  @Post()
-  createContract() {
-    return 'device created';
-  }
-
-  @Post()
-  buyOutDevice() {
-    return 'device created';
-  }
-
-  @Post('')
-  isDeviceAvalable() {
-    return 'is Avalable';
+  @Get('/location/:location')
+  findDeviceByLocation(@Param('location') locationInput: string) {
+    return this.devicesService.findyManyByLocation(locationInput);
   }
 }

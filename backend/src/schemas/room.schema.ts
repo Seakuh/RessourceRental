@@ -1,4 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import mongoose from 'mongoose';
 import { Device } from './device.schema';
 
 export type RoomDocument = Room & Document;
@@ -19,7 +20,7 @@ export class Room {
   location: string;
   //   @Prop()
   //   requiredSafetyBriefing?: SafetyBriefing[];
-  @Prop()
+  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Owner' }] })
   devices?: Device[];
 }
 

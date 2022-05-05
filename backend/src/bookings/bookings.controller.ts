@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+} from '@nestjs/common';
 import { BookingsService } from './bookings.service';
 import { CreateBookingDto } from './dto/create-booking.dto';
 import { UpdateBookingDto } from './dto/update-booking.dto';
@@ -8,8 +16,18 @@ export class BookingsController {
   constructor(private readonly bookingsService: BookingsService) {}
 
   @Post()
-  create(@Body() createBookingDto: CreateBookingDto) {
-    return this.bookingsService.create(createBookingDto);
+  createBooking(@Body() createBookingDto: CreateBookingDto) {
+    return this.bookingsService.createBooking(createBookingDto);
+  }
+
+  @Post()
+  buyOutResource(@Body() createBookingDto: CreateBookingDto) {
+    return this.bookingsService.createBooking(createBookingDto);
+  }
+
+  @Get()
+  isResourceAvalableAvailable(@Body() createBookingDto: CreateBookingDto) {
+    return this.bookingsService.createBooking(createBookingDto);
   }
 
   @Get()
