@@ -26,6 +26,16 @@ export class RoomsController {
     return 'Wir machen jetzt einen neuen contract';
   }
 
+  @Post()
+  checkIsRoomFree(@Body() createRoomDto: CreateRoomContractDto) {
+    return 'Wir machen jetzt einen neuen contract';
+  }
+
+  @Get(':id')
+  findRoomDevices(@Param('id') id: string) {
+    return this.roomsService.findOne(+id);
+  }
+
   @Get()
   findAll() {
     return this.roomsService.findAll();

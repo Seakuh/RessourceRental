@@ -1,5 +1,4 @@
 export class CreateRoomDto {
-  renter: string;
   roomId: string;
   capacity: number;
   costsPerHour: number;

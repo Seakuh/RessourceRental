@@ -45,10 +45,18 @@ export class DevicesController {
     return 'device created';
   }
 
+  @Post()
+  createContract() {
+    return 'device created';
+  }
+
+  @Post()
+  buyOutDevice() {
+    return 'device created';
+  }
+
   @Post('')
   isDeviceAvalable() {
     return 'is Avalable';
   }
-
-  
 }
