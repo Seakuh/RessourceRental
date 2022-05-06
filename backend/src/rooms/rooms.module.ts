@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { RoomSchema } from 'src/schemas/room.schema';
 import { Room } from './entities/room.entity';
-import { RoomRepository } from './room.repository';
 import { RoomsController } from './rooms.controller';
+import { RoomRepository } from './rooms.repository';
 import { RoomsService } from './rooms.service';
 
 @Module({

@@ -20,7 +20,7 @@ export class Room {
   location: string;
   //   @Prop()
   //   requiredSafetyBriefing?: SafetyBriefing[];
-  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Owner' }] })
+  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Devices' }] })
   devices?: Device[];
 }
 
