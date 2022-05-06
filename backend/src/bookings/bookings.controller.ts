@@ -22,11 +22,11 @@ export class BookingsController {
 
   @Post()
   buyOutResource(@Body() createBookingDto: CreateBookingDto) {
-    return this.bookingsService.createBooking(createBookingDto);
+    return this.bookingsService.buyOutResource(createBookingDto);
   }
 
   @Get()
-  isResourceAvalableAvailable(@Body() createBookingDto: CreateBookingDto) {
+  isResourceAvalable(@Body() createBookingDto: CreateBookingDto) {
     return this.bookingsService.createBooking(createBookingDto);
   }
 

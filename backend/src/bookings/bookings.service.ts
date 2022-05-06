@@ -1,10 +1,21 @@
 import { Injectable } from '@nestjs/common';
+import { BookingRepository } from './bookings.repository';
 import { CreateBookingDto } from './dto/create-booking.dto';
+import { CreateRoomBookingDto } from './dto/create-room-booking';
 import { UpdateBookingDto } from './dto/update-booking.dto';
 
 @Injectable()
 export class BookingsService {
+  constructor(private bookingRepository: BookingRepository) {}
+
+  buyOutResource(createBookingDto: CreateBookingDto) {
+    throw new Error('Method not implemented.');
+  }
   createBooking(createBookingDto: CreateBookingDto) {
+    return 'This action adds a new booking';
+  }
+
+  createRoomBooking(createRoomBookingDto: CreateRoomBookingDto) {
     return 'This action adds a new booking';
   }
 
