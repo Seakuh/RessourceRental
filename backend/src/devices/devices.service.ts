@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { DeviceDocument } from 'src/schemas/device.schema';
+import { DevicesRepository } from './devices.repository';
 import { CreateDeviceDto } from './dto/create-device.dto';
 import { UpdateDeviceDto } from './dto/update-device.dto';
 import { Device } from './entities/device.entity';
@@ -11,21 +9,18 @@ export class DevicesService {
   findyManyByLocation(locationInput: string) {
     throw new Error('Method not implemented.');
   }
-  constructor(
-    @InjectModel(Device.name) private deviceModel: Model<DeviceDocument>,
-  ) {}
+  constructor(private deviceRepository: DevicesRepository) {}
 
   async create(createCatDto: CreateDeviceDto): Promise<Device> {
-    const createdDevice = new this.deviceModel(createCatDto);
-    return createdDevice.save();
+    return;
   }
 
   async findAll(): Promise<Device[]> {
-    return this.deviceModel.find().exec();
+    return;
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} device`;
+    return;
   }
 
   update(id: number, updateDeviceDto: UpdateDeviceDto) {

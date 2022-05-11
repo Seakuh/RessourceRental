@@ -26,18 +26,23 @@ export class BookingsController {
   }
 
   @Get()
-  isResourceAvalable(@Body() createBookingDto: CreateBookingDto) {
-    return this.bookingsService.createBooking(createBookingDto);
-  }
-
-  @Get()
   findAll() {
     return this.bookingsService.findAll();
   }
 
+  @Get()
+  isResourceAvalable(@Body() createBookingDto: CreateBookingDto) {
+    return this.bookingsService.createBooking(createBookingDto);
+  }
+
+  @Get(':resourceId')
+  bookingsById(@Param('resourceId') id: string) {
+    return this.bookingsService.findBookingsByResourceId(id);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.bookingsService.findOne(+id);
+    return this.bookingsService.findOne(id);
   }
 
   @Patch(':id')

@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { DevicesService } from 'src/devices/devices.service';
+import { RoomsService } from 'src/rooms/rooms.service';
 import { BookingRepository } from './bookings.repository';
 import { CreateBookingDto } from './dto/create-booking.dto';
 import { CreateRoomBookingDto } from './dto/create-room-booking';
@@ -6,13 +8,25 @@ import { UpdateBookingDto } from './dto/update-booking.dto';
 
 @Injectable()
 export class BookingsService {
-  constructor(private bookingRepository: BookingRepository) {}
+  constructor(
+    private bookingRepository: BookingRepository,
+    private devicesService: DevicesService,
+    private roomsService: RoomsService,
+  ) {}
 
   buyOutResource(createBookingDto: CreateBookingDto) {
     throw new Error('Method not implemented.');
   }
   createBooking(createBookingDto: CreateBookingDto) {
-    return 'This action adds a new booking';
+    if (
+      this.isDeviceAvailable(
+        createBookingDto.fromDate,
+        createBookingDto.toDate,
+        createBookingDto.resourceId,
+      )
+    ) {
+    }
+    return this.bookingRepository.createBooking(createBookingDto);
   }
 
   createRoomBooking(createRoomBookingDto: CreateRoomBookingDto) {
@@ -20,11 +34,15 @@ export class BookingsService {
   }
 
   findAll() {
-    return `This action returns all bookings`;
+    return this.bookingRepository.findAllBookings();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} booking`;
+  findOne(id: string) {
+    return this.bookingRepository.findByResourceId(id);
+  }
+
+  findBookingsByResourceId(resourceId: string) {
+    return this.bookingRepository.findByResourceId(resourceId);
   }
 
   update(id: number, updateBookingDto: UpdateBookingDto) {
@@ -33,5 +51,18 @@ export class BookingsService {
 
   remove(id: number) {
     return `This action removes a #${id} booking`;
+  }
+
+  // internal functions ---------------------------------------------------------
+
+  isDeviceAvailable(
+    fromTimestamp: number,
+    toTimeStamp: number,
+    deviceId: string,
+  ): boolean {
+    const bookings = this.findBookingsByResourceId(deviceId);
+
+    console.log(bookings);
+    return true;
   }
 }

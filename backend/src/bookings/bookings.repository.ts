@@ -4,8 +4,8 @@ import { Model } from 'mongoose';
 import { BookingDocument } from 'src/schemas/booking.schema';
 import { Device, DeviceDocument } from 'src/schemas/device.schema';
 import { Room, RoomDocument } from 'src/schemas/room.schema';
+import { Booking } from '../entities/booking.entity';
 import { CreateBookingDto } from './dto/create-booking.dto';
-import { Booking } from './entities/booking.entity';
 
 @Injectable()
 export class BookingRepository {
@@ -15,6 +15,14 @@ export class BookingRepository {
     @InjectModel(Device.name) private deviceModel: Model<DeviceDocument>,
   ) {}
 
+  find(id: number) {
+    return this.BookingModel.find({ resourceId: id });
+  }
+  findByResourceId(id: string) {
+    console.log('INND' + id);
+    return this.BookingModel.find({ resourceId: id });
+  }
+
   getBookingsByLocation(locationInput: string) {
     return this.BookingModel.find({ location: locationInput }).exec();
   }
@@ -23,6 +31,7 @@ export class BookingRepository {
     return createBooking.save();
   }
   findAllBookings() {
+    console.log('find all bookings');
     return this.BookingModel.find();
   }
 }
