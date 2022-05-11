@@ -1,8 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import logo from "./logo.svg";
 
 function App() {
+  // const web3 = new Web3(
+  //   new Web3.providers.HttpProvider("http://localhost:7545")
+  // );
+  // //
+  // const accounts = await web3.eth.getAccounts();
+  // const networkId = await web3.eth.net.getId();
+  // const deployedNetwork = SimpleStorageContract.networks[networkId];
+  // const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
+
   return (
     <div className="App">
       <header className="App-header">
