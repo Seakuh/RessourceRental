@@ -1,0 +1,116 @@
+{
+  "contractName": "ResourceRentalOracle",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/1_Resource_Rental..sol\":\"ResourceRentalOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/1_Resource_Rental..sol\":{\"keccak256\":\"0xa76ce1a97c9462e53122cf91e5bef0818f92b9944a30383098f6ff03147da841\",\"urls\":[\"bzz-raw://6d90aba241ae40150a0bc66421b89b0faa94b148c9a1cb33c97ed2accaaed112\",\"dweb:/ipfs/QmbQ1iK97U7RBc5P5WEXsFGmhqXYi2J2Yitp8SwTH7uMWb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820aafcbf0f3361607ab00e508039bd1ce493ff3b6e206a3a6a4dace2cb80f7343b64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820aafcbf0f3361607ab00e508039bd1ce493ff3b6e206a3a6a4dace2cb80f7343b64736f6c63430005100032",
+  "sourceMap": "26:32:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:32:0;;;;;;;",
+  "deployedSourceMap": "26:32:0:-;;;;;",
+  "source": "pragma solidity ^0.5.16;\n\ncontract ResourceRentalOracle {}\n",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/1_Resource_Rental..sol",
+  "ast": {
+    "absolutePath": "project:/contracts/1_Resource_Rental..sol",
+    "exportedSymbols": {
+      "ResourceRentalOracle": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "ResourceRentalOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "26:32:0"
+      }
+    ],
+    "src": "0:59:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/1_Resource_Rental..sol",
+      "exportedSymbols": {
+        "ResourceRentalOracle": [
+          2
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2
+          ],
+          "name": "ResourceRentalOracle",
+          "nodes": [
+            null
+          ],
+          "scope": 3
+        },
+        "id": 2,
+        "name": "ContractDefinition",
+        "src": "26:32:0"
+      }
+    ],
+    "id": 3,
+    "name": "SourceUnit",
+    "src": "0:59:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-13T07:29:01.660Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,47 +1,76 @@
 pragma solidity ^0.5.16;
 
 contract ResourceRental {
-    uint256 public bookingsCount = 0;
-    mapping(uint256 => Booking) public bookings;
-    // address public owner;
-    Resource resourceInformation;
+    address owner;
+    address currentRenter;
+    uint256 fromTimestamp;
+    uint256 toTimestamp;
+    uint256 maxRentTime;
+    uint256 offsetBookingTime;
+    Permission resourcePermission;
 
-    struct Booking {
-        uint256 bookingId;
-        uint256 fromDate;
-        uint256 toDate;
-        uint256 renter;
+    enum Permission {
+        STUDENT,
+        SCIENTIFIC_ASSISTANT,
+        PROFESSOR
     }
 
-    struct Resource {
-        uint256 maxRentTime;
-        bool buyOut;
-    }
-
-    constructor() public {
-        // owner = msg.sender;
+    constructor(
+        Permission permissionInput,
+        uint256 maxRentTimeInput,
+        uint256 offsetBookingTimeInput
+    ) public {
+        owner = msg.sender;
+        maxRentTime = maxRentTimeInput;
+        offsetBookingTime = offsetBookingTimeInput;
+        resourcePermission = permissionInput;
     }
 
     event BookingCreated(
-        uint256 bookingId,
         uint256 fromTimeStamp,
-        uint256 toTimeStamp
+        uint256 toTimeStamp,
+        address renterAddress,
+        Permission renterPermission
     );
 
     function createBooking(
-        uint256 fromTimeStamp,
-        uint256 toTimeStamp,
-        uint256 renterAddress
+        uint256 fromTimeStampInput,
+        uint256 toTimeStampInput,
+        address renterAddress,
+        Permission renterPermission
     ) public {
-        bookingsCount++;
-
-        bookings[bookingsCount] = Booking(
-            bookingsCount,
-            fromTimeStamp,
-            toTimeStamp,
-            renterAddress
+        require(
+            block.timestamp < (offsetBookingTime + uint256(fromTimeStampInput)),
+            "The rental must be in future"
         );
 
-        emit BookingCreated(bookingsCount, fromTimeStamp, toTimeStamp);
+        require(
+            (renterPermission >= resourcePermission),
+            "The User is allowed to book the room"
+        );
+
+        currentRenter = renterAddress;
+        fromTimestamp = fromTimeStampInput;
+        toTimestamp = toTimeStampInput;
+
+        emit BookingCreated(
+            fromTimeStampInput,
+            toTimeStampInput,
+            renterAddress,
+            renterPermission
+        );
+    }
+
+    function getRentalRenter() public view returns (address) {
+        return currentRenter;
+    }
+
+    function getResourceRequiredPermission() public view returns (Permission) {
+        return resourcePermission;
+    }
+
+    modifier isOwner() {
+        require(msg.sender == owner, "Caller is not owner");
+        _;
     }
 }
