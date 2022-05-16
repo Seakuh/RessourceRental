@@ -115,25 +115,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"permissionInput\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"maxRentTimeInput\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"offsetBookingTimeInput\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fromTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"toTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"BookingCreated\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fromTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"toTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"createBooking\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getRentalRenter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getResourceRequiredPermission\",\"outputs\":[{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ResourceRental.sol\":\"ResourceRental\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ResourceRental.sol\":{\"keccak256\":\"0x6f46a2ffb5b6203575a0d0f6408b3e5f4499ce10a3becafccece77b6dc961ab6\",\"urls\":[\"bzz-raw://4c60883b93d61782e303b46ab6ef827fb6feb6842c3c88635810027ed90a96d4\",\"dweb:/ipfs/QmaHb2iPDpSEjHuyCY15PgwM8ics5tJwgxMgW5AKXdxsGm\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060405161046b38038061046b8339818101604052606081101561003357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550816004819055508060058190555082600660006101000a81548160ff021916908360028111156100c457fe5b0217905550505050610390806100db6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806390a13e6314610046578063b7445120146100ab578063ecdd45d1146100f5575b600080fd5b6100a96004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff169060200190929190505050610121565b005b6100b36102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd610320565b6040518082600281111561010d57fe5b60ff16815260200191505060405180910390f35b8360055401421061019a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600660009054906101000a900460ff1660028111156101b557fe5b8160028111156101c157fe5b1015610218576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806103386024913960400191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555083600281905550826003819055507f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156102da57fe5b60ff16815260200194505050505060405180910390a150505050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600660009054906101000a900460ff1690509056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6da265627a7a7231582000182830be340e41d4269909350dbfbe1826e6c8bf981957aefca31bbe823e9964736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806390a13e6314610046578063b7445120146100ab578063ecdd45d1146100f5575b600080fd5b6100a96004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff169060200190929190505050610121565b005b6100b36102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd610320565b6040518082600281111561010d57fe5b60ff16815260200191505060405180910390f35b8360055401421061019a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600660009054906101000a900460ff1660028111156101b557fe5b8160028111156101c157fe5b1015610218576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806103386024913960400191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555083600281905550826003819055507f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156102da57fe5b60ff16815260200194505050505060405180910390a150505050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600660009054906101000a900460ff1690509056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6da265627a7a7231582000182830be340e41d4269909350dbfbe1826e6c8bf981957aefca31bbe823e9964736f6c63430005100032",
-  "sourceMap": "26:1867:1:-;;;340:308;8:9:-1;5:2;;;30:1;27;20:12;5:2;340:308:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;340:308:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;493:10;485:5;;:18;;;;;;;;;;;;;;;;;;527:16;513:11;:30;;;;573:22;553:17;:42;;;;626:15;605:18;;:36;;;;;;;;;;;;;;;;;;;;;;;;340:308;;;26:1867;;;;;;",
-  "deployedSourceMap": "26:1867:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:1867:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;815:750:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1571:94;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1671:116;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;1067:18;1039:17;;:47;1020:15;:67;999:142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1194:18;;;;;;;;;;;1174:38;;;;;;;;:16;:38;;;;;;;;;;1152:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1302:13;1286;;:29;;;;;;;;;;;;;;;;;;1341:18;1325:13;:34;;;;1383:16;1369:11;:30;;;;1415:143;1443:18;1475:16;1505:13;1532:16;1415:143;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;;;;:::o;1571:94::-;1619:7;1645:13;;;;;;;;;;;1638:20;;1571:94;:::o;1671:116::-;1733:10;1762:18;;;;;;;;;;;1755:25;;1671:116;:::o",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"permissionInput\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"maxRentTimeInput\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"offsetBookingTimeInput\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fromTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"toTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"BookingCreated\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fromTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"toTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"createBooking\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getRentalRenter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getResourceRequiredPermission\",\"outputs\":[{\"internalType\":\"enum ResourceRental.Permission\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ResourceRentalBase.sol\":\"ResourceRental\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ResourceRentalBase.sol\":{\"keccak256\":\"0x6f46a2ffb5b6203575a0d0f6408b3e5f4499ce10a3becafccece77b6dc961ab6\",\"urls\":[\"bzz-raw://4c60883b93d61782e303b46ab6ef827fb6feb6842c3c88635810027ed90a96d4\",\"dweb:/ipfs/QmaHb2iPDpSEjHuyCY15PgwM8ics5tJwgxMgW5AKXdxsGm\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161046b38038061046b8339818101604052606081101561003357600080fd5b81019080805190602001909291908051906020019092919080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550816004819055508060058190555082600660006101000a81548160ff021916908360028111156100c457fe5b0217905550505050610390806100db6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806390a13e6314610046578063b7445120146100ab578063ecdd45d1146100f5575b600080fd5b6100a96004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff169060200190929190505050610121565b005b6100b36102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd610320565b6040518082600281111561010d57fe5b60ff16815260200191505060405180910390f35b8360055401421061019a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600660009054906101000a900460ff1660028111156101b557fe5b8160028111156101c157fe5b1015610218576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806103386024913960400191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555083600281905550826003819055507f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156102da57fe5b60ff16815260200194505050505060405180910390a150505050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600660009054906101000a900460ff1690509056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6da265627a7a723158205ea3f67c3dd9cd2db1655422f0ff3e00f2f39275fdd55802432d6ec054566c7864736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806390a13e6314610046578063b7445120146100ab578063ecdd45d1146100f5575b600080fd5b6100a96004803603608081101561005c57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff169060200190929190505050610121565b005b6100b36102f6565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100fd610320565b6040518082600281111561010d57fe5b60ff16815260200191505060405180910390f35b8360055401421061019a576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600660009054906101000a900460ff1660028111156101b557fe5b8160028111156101c157fe5b1015610218576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806103386024913960400191505060405180910390fd5b81600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555083600281905550826003819055507f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156102da57fe5b60ff16815260200194505050505060405180910390a150505050565b6000600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6000600660009054906101000a900460ff1690509056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6da265627a7a723158205ea3f67c3dd9cd2db1655422f0ff3e00f2f39275fdd55802432d6ec054566c7864736f6c63430005100032",
+  "sourceMap": "26:1867:4:-;;;340:308;8:9:-1;5:2;;;30:1;27;20:12;5:2;340:308:4;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;340:308:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;493:10;485:5;;:18;;;;;;;;;;;;;;;;;;527:16;513:11;:30;;;;573:22;553:17;:42;;;;626:15;605:18;;:36;;;;;;;;;;;;;;;;;;;;;;;;340:308;;;26:1867;;;;;;",
+  "deployedSourceMap": "26:1867:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:1867:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;815:750:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;1571:94;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1671:116;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;1067:18;1039:17;;:47;1020:15;:67;999:142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1194:18;;;;;;;;;;;1174:38;;;;;;;;:16;:38;;;;;;;;;;1152:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1302:13;1286;;:29;;;;;;;;;;;;;;;;;;1341:18;1325:13;:34;;;;1383:16;1369:11;:30;;;;1415:143;1443:18;1475:16;1505:13;1532:16;1415:143;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;815:750;;;;:::o;1571:94::-;1619:7;1645:13;;;;;;;;;;;1638:20;;1571:94;:::o;1671:116::-;1733:10;1762:18;;;;;;;;;;;1755:25;;1671:116;:::o",
   "source": "pragma solidity ^0.5.16;\n\ncontract ResourceRental {\n    address owner;\n    address currentRenter;\n    uint256 fromTimestamp;\n    uint256 toTimestamp;\n    uint256 maxRentTime;\n    uint256 offsetBookingTime;\n    Permission resourcePermission;\n\n    enum Permission {\n        STUDENT,\n        SCIENTIFIC_ASSISTANT,\n        PROFESSOR\n    }\n\n    constructor(\n        Permission permissionInput,\n        uint256 maxRentTimeInput,\n        uint256 offsetBookingTimeInput\n    ) public {\n        owner = msg.sender;\n        maxRentTime = maxRentTimeInput;\n        offsetBookingTime = offsetBookingTimeInput;\n        resourcePermission = permissionInput;\n    }\n\n    event BookingCreated(\n        uint256 fromTimeStamp,\n        uint256 toTimeStamp,\n        address renterAddress,\n        Permission renterPermission\n    );\n\n    function createBooking(\n        uint256 fromTimeStampInput,\n        uint256 toTimeStampInput,\n        address renterAddress,\n        Permission renterPermission\n    ) public {\n        require(\n            block.timestamp < (offsetBookingTime + uint256(fromTimeStampInput)),\n            \"The rental must be in future\"\n        );\n\n        require(\n            (renterPermission >= resourcePermission),\n            \"The User is allowed to book the room\"\n        );\n\n        currentRenter = renterAddress;\n        fromTimestamp = fromTimeStampInput;\n        toTimestamp = toTimeStampInput;\n\n        emit BookingCreated(\n            fromTimeStampInput,\n            toTimeStampInput,\n            renterAddress,\n            renterPermission\n        );\n    }\n\n    function getRentalRenter() public view returns (address) {\n        return currentRenter;\n    }\n\n    function getResourceRequiredPermission() public view returns (Permission) {\n        return resourcePermission;\n    }\n\n    modifier isOwner() {\n        require(msg.sender == owner, \"Caller is not owner\");\n        _;\n    }\n}\n",
-  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/ResourceRental.sol",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/ResourceRentalBase.sol",
   "ast": {
-    "absolutePath": "project:/contracts/ResourceRental.sol",
+    "absolutePath": "project:/contracts/ResourceRentalBase.sol",
     "exportedSymbols": {
       "ResourceRental": [
-        140
+        290
       ]
     },
-    "id": 141,
+    "id": 291,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4,
+        "id": 154,
         "literals": [
           "solidity",
           "^",
@@ -141,7 +141,7 @@
           ".16"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:4"
       },
       {
         "baseContracts": [],
@@ -149,20 +149,20 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 140,
+        "id": 290,
         "linearizedBaseContracts": [
-          140
+          290
         ],
         "name": "ResourceRental",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 6,
+            "id": 156,
             "name": "owner",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "56:13:1",
+            "scope": 290,
+            "src": "56:13:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -170,10 +170,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 5,
+              "id": 155,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "56:7:1",
+              "src": "56:7:4",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -185,11 +185,11 @@
           },
           {
             "constant": false,
-            "id": 8,
+            "id": 158,
             "name": "currentRenter",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "75:21:1",
+            "scope": 290,
+            "src": "75:21:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -197,10 +197,10 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 7,
+              "id": 157,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "75:7:1",
+              "src": "75:7:4",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -212,11 +212,11 @@
           },
           {
             "constant": false,
-            "id": 10,
+            "id": 160,
             "name": "fromTimestamp",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "102:21:1",
+            "scope": 290,
+            "src": "102:21:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -224,10 +224,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 9,
+              "id": 159,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "102:7:1",
+              "src": "102:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -238,11 +238,11 @@
           },
           {
             "constant": false,
-            "id": 12,
+            "id": 162,
             "name": "toTimestamp",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "129:19:1",
+            "scope": 290,
+            "src": "129:19:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -250,10 +250,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11,
+              "id": 161,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "129:7:1",
+              "src": "129:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -264,11 +264,11 @@
           },
           {
             "constant": false,
-            "id": 14,
+            "id": 164,
             "name": "maxRentTime",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "154:19:1",
+            "scope": 290,
+            "src": "154:19:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -276,10 +276,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 13,
+              "id": 163,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "154:7:1",
+              "src": "154:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -290,11 +290,11 @@
           },
           {
             "constant": false,
-            "id": 16,
+            "id": 166,
             "name": "offsetBookingTime",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "179:25:1",
+            "scope": 290,
+            "src": "179:25:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -302,10 +302,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 15,
+              "id": 165,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "179:7:1",
+              "src": "179:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -316,26 +316,26 @@
           },
           {
             "constant": false,
-            "id": 18,
+            "id": 168,
             "name": "resourcePermission",
             "nodeType": "VariableDeclaration",
-            "scope": 140,
-            "src": "210:29:1",
+            "scope": 290,
+            "src": "210:29:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_enum$_Permission_$22",
+              "typeIdentifier": "t_enum$_Permission_$172",
               "typeString": "enum ResourceRental.Permission"
             },
             "typeName": {
               "contractScope": null,
-              "id": 17,
+              "id": 167,
               "name": "Permission",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 22,
-              "src": "210:10:1",
+              "referencedDeclaration": 172,
+              "src": "210:10:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_enum$_Permission_$22",
+                "typeIdentifier": "t_enum$_Permission_$172",
                 "typeString": "enum ResourceRental.Permission"
               }
             },
@@ -344,53 +344,53 @@
           },
           {
             "canonicalName": "ResourceRental.Permission",
-            "id": 22,
+            "id": 172,
             "members": [
               {
-                "id": 19,
+                "id": 169,
                 "name": "STUDENT",
                 "nodeType": "EnumValue",
-                "src": "272:7:1"
+                "src": "272:7:4"
               },
               {
-                "id": 20,
+                "id": 170,
                 "name": "SCIENTIFIC_ASSISTANT",
                 "nodeType": "EnumValue",
-                "src": "289:20:1"
+                "src": "289:20:4"
               },
               {
-                "id": 21,
+                "id": 171,
                 "name": "PROFESSOR",
                 "nodeType": "EnumValue",
-                "src": "319:9:1"
+                "src": "319:9:4"
               }
             ],
             "name": "Permission",
             "nodeType": "EnumDefinition",
-            "src": "246:88:1"
+            "src": "246:88:4"
           },
           {
             "body": {
-              "id": 48,
+              "id": 198,
               "nodeType": "Block",
-              "src": "475:173:1",
+              "src": "475:173:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 34,
+                    "id": 184,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 31,
+                      "id": 181,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6,
-                      "src": "485:5:1",
+                      "referencedDeclaration": 156,
+                      "src": "485:5:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -402,18 +402,18 @@
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 32,
+                        "id": 182,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 155,
-                        "src": "493:3:1",
+                        "referencedDeclaration": 413,
+                        "src": "493:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 33,
+                      "id": 183,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -421,38 +421,38 @@
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "493:10:1",
+                      "src": "493:10:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address_payable",
                         "typeString": "address payable"
                       }
                     },
-                    "src": "485:18:1",
+                    "src": "485:18:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 35,
+                  "id": 185,
                   "nodeType": "ExpressionStatement",
-                  "src": "485:18:1"
+                  "src": "485:18:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 38,
+                    "id": 188,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 36,
+                      "id": 186,
                       "name": "maxRentTime",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 14,
-                      "src": "513:11:1",
+                      "referencedDeclaration": 164,
+                      "src": "513:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -462,43 +462,43 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 37,
+                      "id": 187,
                       "name": "maxRentTimeInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 26,
-                      "src": "527:16:1",
+                      "referencedDeclaration": 176,
+                      "src": "527:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "513:30:1",
+                    "src": "513:30:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 39,
+                  "id": 189,
                   "nodeType": "ExpressionStatement",
-                  "src": "513:30:1"
+                  "src": "513:30:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 42,
+                    "id": 192,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 40,
+                      "id": 190,
                       "name": "offsetBookingTime",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 16,
-                      "src": "553:17:1",
+                      "referencedDeclaration": 166,
+                      "src": "553:17:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -508,45 +508,45 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 41,
+                      "id": 191,
                       "name": "offsetBookingTimeInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 28,
-                      "src": "573:22:1",
+                      "referencedDeclaration": 178,
+                      "src": "573:22:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "553:42:1",
+                    "src": "553:42:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 43,
+                  "id": 193,
                   "nodeType": "ExpressionStatement",
-                  "src": "553:42:1"
+                  "src": "553:42:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 46,
+                    "id": 196,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 44,
+                      "id": 194,
                       "name": "resourcePermission",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 18,
-                      "src": "605:18:1",
+                      "referencedDeclaration": 168,
+                      "src": "605:18:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Permission_$22",
+                        "typeIdentifier": "t_enum$_Permission_$172",
                         "typeString": "enum ResourceRental.Permission"
                       }
                     },
@@ -554,62 +554,62 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 45,
+                      "id": 195,
                       "name": "permissionInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 24,
-                      "src": "626:15:1",
+                      "referencedDeclaration": 174,
+                      "src": "626:15:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_enum$_Permission_$22",
+                        "typeIdentifier": "t_enum$_Permission_$172",
                         "typeString": "enum ResourceRental.Permission"
                       }
                     },
-                    "src": "605:36:1",
+                    "src": "605:36:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
-                  "id": 47,
+                  "id": 197,
                   "nodeType": "ExpressionStatement",
-                  "src": "605:36:1"
+                  "src": "605:36:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 49,
+            "id": 199,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 29,
+              "id": 179,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 24,
+                  "id": 174,
                   "name": "permissionInput",
                   "nodeType": "VariableDeclaration",
-                  "scope": 49,
-                  "src": "361:26:1",
+                  "scope": 199,
+                  "src": "361:26:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Permission_$22",
+                    "typeIdentifier": "t_enum$_Permission_$172",
                     "typeString": "enum ResourceRental.Permission"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 23,
+                    "id": 173,
                     "name": "Permission",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "361:10:1",
+                    "referencedDeclaration": 172,
+                    "src": "361:10:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
@@ -618,11 +618,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 26,
+                  "id": 176,
                   "name": "maxRentTimeInput",
                   "nodeType": "VariableDeclaration",
-                  "scope": 49,
-                  "src": "397:24:1",
+                  "scope": 199,
+                  "src": "397:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -630,10 +630,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 25,
+                    "id": 175,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "397:7:1",
+                    "src": "397:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -644,11 +644,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 28,
+                  "id": 178,
                   "name": "offsetBookingTimeInput",
                   "nodeType": "VariableDeclaration",
-                  "scope": 49,
-                  "src": "431:30:1",
+                  "scope": 199,
+                  "src": "431:30:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -656,10 +656,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 27,
+                    "id": 177,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "431:7:1",
+                    "src": "431:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -669,16 +669,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "351:116:1"
+              "src": "351:116:4"
             },
             "returnParameters": {
-              "id": 30,
+              "id": 180,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "475:0:1"
+              "src": "475:0:4"
             },
-            "scope": 140,
-            "src": "340:308:1",
+            "scope": 290,
+            "src": "340:308:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -686,21 +686,21 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 59,
+            "id": 209,
             "name": "BookingCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 58,
+              "id": 208,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51,
+                  "id": 201,
                   "indexed": false,
                   "name": "fromTimeStamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "684:21:1",
+                  "scope": 209,
+                  "src": "684:21:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -708,10 +708,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 50,
+                    "id": 200,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "684:7:1",
+                    "src": "684:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -722,12 +722,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 53,
+                  "id": 203,
                   "indexed": false,
                   "name": "toTimeStamp",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "715:19:1",
+                  "scope": 209,
+                  "src": "715:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -735,10 +735,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 52,
+                    "id": 202,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "715:7:1",
+                    "src": "715:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -749,12 +749,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 55,
+                  "id": 205,
                   "indexed": false,
                   "name": "renterAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "744:21:1",
+                  "scope": 209,
+                  "src": "744:21:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -762,10 +762,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 54,
+                    "id": 204,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "744:7:1",
+                    "src": "744:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -777,27 +777,27 @@
                 },
                 {
                   "constant": false,
-                  "id": 57,
+                  "id": 207,
                   "indexed": false,
                   "name": "renterPermission",
                   "nodeType": "VariableDeclaration",
-                  "scope": 59,
-                  "src": "775:27:1",
+                  "scope": 209,
+                  "src": "775:27:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Permission_$22",
+                    "typeIdentifier": "t_enum$_Permission_$172",
                     "typeString": "enum ResourceRental.Permission"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 56,
+                    "id": 206,
                     "name": "Permission",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "775:10:1",
+                    "referencedDeclaration": 172,
+                    "src": "775:10:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
@@ -805,15 +805,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "674:134:1"
+              "src": "674:134:4"
             },
-            "src": "654:155:1"
+            "src": "654:155:4"
           },
           {
             "body": {
-              "id": 110,
+              "id": 260,
               "nodeType": "Block",
-              "src": "989:576:1",
+              "src": "989:576:4",
               "statements": [
                 {
                   "expression": {
@@ -825,7 +825,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 79,
+                        "id": 229,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -834,18 +834,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 71,
+                            "id": 221,
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 145,
-                            "src": "1020:5:1",
+                            "referencedDeclaration": 403,
+                            "src": "1020:5:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
                               "typeString": "block"
                             }
                           },
-                          "id": 72,
+                          "id": 222,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -853,7 +853,7 @@
                           "memberName": "timestamp",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1020:15:1",
+                          "src": "1020:15:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -870,19 +870,19 @@
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               },
-                              "id": 77,
+                              "id": 227,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
                                 "argumentTypes": null,
-                                "id": 73,
+                                "id": 223,
                                 "name": "offsetBookingTime",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 16,
-                                "src": "1039:17:1",
+                                "referencedDeclaration": 166,
+                                "src": "1039:17:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -895,12 +895,12 @@
                                 "arguments": [
                                   {
                                     "argumentTypes": null,
-                                    "id": 75,
+                                    "id": 225,
                                     "name": "fromTimeStampInput",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 61,
-                                    "src": "1067:18:1",
+                                    "referencedDeclaration": 211,
+                                    "src": "1067:18:4",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
@@ -914,20 +914,20 @@
                                       "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 74,
+                                  "id": 224,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "lValueRequested": false,
                                   "nodeType": "ElementaryTypeNameExpression",
-                                  "src": "1059:7:1",
+                                  "src": "1059:7:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_type$_t_uint256_$",
                                     "typeString": "type(uint256)"
                                   },
                                   "typeName": "uint256"
                                 },
-                                "id": 76,
+                                "id": 226,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -935,33 +935,33 @@
                                 "lValueRequested": false,
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "1059:27:1",
+                                "src": "1059:27:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 }
                               },
-                              "src": "1039:47:1",
+                              "src": "1039:47:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             }
                           ],
-                          "id": 78,
+                          "id": 228,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "TupleExpression",
-                          "src": "1038:49:1",
+                          "src": "1038:49:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "src": "1020:67:1",
+                        "src": "1020:67:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -970,14 +970,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "5468652072656e74616c206d75737420626520696e20667574757265",
-                        "id": 80,
+                        "id": 230,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1101:30:1",
+                        "src": "1101:30:4",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_f21e3dae89bc51ce8d1f09942565172c0e6829bff6efc477514783878712db14",
@@ -997,21 +997,21 @@
                           "typeString": "literal_string \"The rental must be in future\""
                         }
                       ],
-                      "id": 70,
+                      "id": 220,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        158,
-                        159
+                        416,
+                        417
                       ],
-                      "referencedDeclaration": 159,
-                      "src": "999:7:1",
+                      "referencedDeclaration": 417,
+                      "src": "999:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 81,
+                    "id": 231,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1019,15 +1019,15 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "999:142:1",
+                    "src": "999:142:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 82,
+                  "id": 232,
                   "nodeType": "ExpressionStatement",
-                  "src": "999:142:1"
+                  "src": "999:142:4"
                 },
                 {
                   "expression": {
@@ -1039,24 +1039,24 @@
                           {
                             "argumentTypes": null,
                             "commonType": {
-                              "typeIdentifier": "t_enum$_Permission_$22",
+                              "typeIdentifier": "t_enum$_Permission_$172",
                               "typeString": "enum ResourceRental.Permission"
                             },
-                            "id": 86,
+                            "id": 236,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 84,
+                              "id": 234,
                               "name": "renterPermission",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 67,
-                              "src": "1174:16:1",
+                              "referencedDeclaration": 217,
+                              "src": "1174:16:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_enum$_Permission_$22",
+                                "typeIdentifier": "t_enum$_Permission_$172",
                                 "typeString": "enum ResourceRental.Permission"
                               }
                             },
@@ -1064,32 +1064,32 @@
                             "operator": ">=",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 85,
+                              "id": 235,
                               "name": "resourcePermission",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 18,
-                              "src": "1194:18:1",
+                              "referencedDeclaration": 168,
+                              "src": "1194:18:4",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_enum$_Permission_$22",
+                                "typeIdentifier": "t_enum$_Permission_$172",
                                 "typeString": "enum ResourceRental.Permission"
                               }
                             },
-                            "src": "1174:38:1",
+                            "src": "1174:38:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             }
                           }
                         ],
-                        "id": 87,
+                        "id": 237,
                         "isConstant": false,
                         "isInlineArray": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "TupleExpression",
-                        "src": "1173:40:1",
+                        "src": "1173:40:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1098,14 +1098,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6d",
-                        "id": 88,
+                        "id": 238,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1227:38:1",
+                        "src": "1227:38:4",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_168522ba6d3ebaaa51bd1b4d4f190b5efd6a956ea43b111927d974efc06a6914",
@@ -1125,21 +1125,21 @@
                           "typeString": "literal_string \"The User is allowed to book the room\""
                         }
                       ],
-                      "id": 83,
+                      "id": 233,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        158,
-                        159
+                        416,
+                        417
                       ],
-                      "referencedDeclaration": 159,
-                      "src": "1152:7:1",
+                      "referencedDeclaration": 417,
+                      "src": "1152:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 89,
+                    "id": 239,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1147,32 +1147,32 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1152:123:1",
+                    "src": "1152:123:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 90,
+                  "id": 240,
                   "nodeType": "ExpressionStatement",
-                  "src": "1152:123:1"
+                  "src": "1152:123:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 93,
+                    "id": 243,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 91,
+                      "id": 241,
                       "name": "currentRenter",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8,
-                      "src": "1286:13:1",
+                      "referencedDeclaration": 158,
+                      "src": "1286:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -1182,43 +1182,43 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 92,
+                      "id": 242,
                       "name": "renterAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 65,
-                      "src": "1302:13:1",
+                      "referencedDeclaration": 215,
+                      "src": "1302:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1286:29:1",
+                    "src": "1286:29:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 94,
+                  "id": 244,
                   "nodeType": "ExpressionStatement",
-                  "src": "1286:29:1"
+                  "src": "1286:29:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 97,
+                    "id": 247,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 95,
+                      "id": 245,
                       "name": "fromTimestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 10,
-                      "src": "1325:13:1",
+                      "referencedDeclaration": 160,
+                      "src": "1325:13:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1228,43 +1228,43 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 96,
+                      "id": 246,
                       "name": "fromTimeStampInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 61,
-                      "src": "1341:18:1",
+                      "referencedDeclaration": 211,
+                      "src": "1341:18:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1325:34:1",
+                    "src": "1325:34:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 98,
+                  "id": 248,
                   "nodeType": "ExpressionStatement",
-                  "src": "1325:34:1"
+                  "src": "1325:34:4"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 101,
+                    "id": 251,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 99,
+                      "id": 249,
                       "name": "toTimestamp",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 12,
-                      "src": "1369:11:1",
+                      "referencedDeclaration": 162,
+                      "src": "1369:11:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1274,26 +1274,26 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 100,
+                      "id": 250,
                       "name": "toTimeStampInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 63,
-                      "src": "1383:16:1",
+                      "referencedDeclaration": 213,
+                      "src": "1383:16:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1369:30:1",
+                    "src": "1369:30:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 102,
+                  "id": 252,
                   "nodeType": "ExpressionStatement",
-                  "src": "1369:30:1"
+                  "src": "1369:30:4"
                 },
                 {
                   "eventCall": {
@@ -1301,12 +1301,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 104,
+                        "id": 254,
                         "name": "fromTimeStampInput",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 61,
-                        "src": "1443:18:1",
+                        "referencedDeclaration": 211,
+                        "src": "1443:18:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1314,12 +1314,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 105,
+                        "id": 255,
                         "name": "toTimeStampInput",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 63,
-                        "src": "1475:16:1",
+                        "referencedDeclaration": 213,
+                        "src": "1475:16:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1327,12 +1327,12 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 106,
+                        "id": 256,
                         "name": "renterAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 65,
-                        "src": "1505:13:1",
+                        "referencedDeclaration": 215,
+                        "src": "1505:13:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1340,14 +1340,14 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 107,
+                        "id": 257,
                         "name": "renterPermission",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
-                        "src": "1532:16:1",
+                        "referencedDeclaration": 217,
+                        "src": "1532:16:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_Permission_$22",
+                          "typeIdentifier": "t_enum$_Permission_$172",
                           "typeString": "enum ResourceRental.Permission"
                         }
                       }
@@ -1367,22 +1367,22 @@
                           "typeString": "address"
                         },
                         {
-                          "typeIdentifier": "t_enum$_Permission_$22",
+                          "typeIdentifier": "t_enum$_Permission_$172",
                           "typeString": "enum ResourceRental.Permission"
                         }
                       ],
-                      "id": 103,
+                      "id": 253,
                       "name": "BookingCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 59,
-                      "src": "1415:14:1",
+                      "referencedDeclaration": 209,
+                      "src": "1415:14:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_address_$_t_enum$_Permission_$22_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_address_$_t_enum$_Permission_$172_$returns$__$",
                         "typeString": "function (uint256,uint256,address,enum ResourceRental.Permission)"
                       }
                     },
-                    "id": 108,
+                    "id": 258,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1390,36 +1390,36 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1415:143:1",
+                    "src": "1415:143:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 109,
+                  "id": 259,
                   "nodeType": "EmitStatement",
-                  "src": "1410:148:1"
+                  "src": "1410:148:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 111,
+            "id": 261,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createBooking",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 68,
+              "id": 218,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 61,
+                  "id": 211,
                   "name": "fromTimeStampInput",
                   "nodeType": "VariableDeclaration",
-                  "scope": 111,
-                  "src": "847:26:1",
+                  "scope": 261,
+                  "src": "847:26:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1427,10 +1427,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 60,
+                    "id": 210,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "847:7:1",
+                    "src": "847:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1441,11 +1441,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 63,
+                  "id": 213,
                   "name": "toTimeStampInput",
                   "nodeType": "VariableDeclaration",
-                  "scope": 111,
-                  "src": "883:24:1",
+                  "scope": 261,
+                  "src": "883:24:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1453,10 +1453,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 62,
+                    "id": 212,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "883:7:1",
+                    "src": "883:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1467,11 +1467,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 65,
+                  "id": 215,
                   "name": "renterAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 111,
-                  "src": "917:21:1",
+                  "scope": 261,
+                  "src": "917:21:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1479,10 +1479,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 64,
+                    "id": 214,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "917:7:1",
+                    "src": "917:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1494,26 +1494,26 @@
                 },
                 {
                   "constant": false,
-                  "id": 67,
+                  "id": 217,
                   "name": "renterPermission",
                   "nodeType": "VariableDeclaration",
-                  "scope": 111,
-                  "src": "948:27:1",
+                  "scope": 261,
+                  "src": "948:27:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Permission_$22",
+                    "typeIdentifier": "t_enum$_Permission_$172",
                     "typeString": "enum ResourceRental.Permission"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 66,
+                    "id": 216,
                     "name": "Permission",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "948:10:1",
+                    "referencedDeclaration": 172,
+                    "src": "948:10:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
@@ -1521,71 +1521,71 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "837:144:1"
+              "src": "837:144:4"
             },
             "returnParameters": {
-              "id": 69,
+              "id": 219,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "989:0:1"
+              "src": "989:0:4"
             },
-            "scope": 140,
-            "src": "815:750:1",
+            "scope": 290,
+            "src": "815:750:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 118,
+              "id": 268,
               "nodeType": "Block",
-              "src": "1628:37:1",
+              "src": "1628:37:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 116,
+                    "id": 266,
                     "name": "currentRenter",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 8,
-                    "src": "1645:13:1",
+                    "referencedDeclaration": 158,
+                    "src": "1645:13:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 115,
-                  "id": 117,
+                  "functionReturnParameters": 265,
+                  "id": 267,
                   "nodeType": "Return",
-                  "src": "1638:20:1"
+                  "src": "1638:20:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 119,
+            "id": 269,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getRentalRenter",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 112,
+              "id": 262,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1595:2:1"
+              "src": "1595:2:4"
             },
             "returnParameters": {
-              "id": 115,
+              "id": 265,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 114,
+                  "id": 264,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 119,
-                  "src": "1619:7:1",
+                  "scope": 269,
+                  "src": "1619:7:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1593,10 +1593,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 113,
+                    "id": 263,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1619:7:1",
+                    "src": "1619:7:4",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1607,80 +1607,80 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1618:9:1"
+              "src": "1618:9:4"
             },
-            "scope": 140,
-            "src": "1571:94:1",
+            "scope": 290,
+            "src": "1571:94:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 126,
+              "id": 276,
               "nodeType": "Block",
-              "src": "1745:42:1",
+              "src": "1745:42:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 124,
+                    "id": 274,
                     "name": "resourcePermission",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 18,
-                    "src": "1762:18:1",
+                    "referencedDeclaration": 168,
+                    "src": "1762:18:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
-                  "functionReturnParameters": 123,
-                  "id": 125,
+                  "functionReturnParameters": 273,
+                  "id": 275,
                   "nodeType": "Return",
-                  "src": "1755:25:1"
+                  "src": "1755:25:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 127,
+            "id": 277,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getResourceRequiredPermission",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 120,
+              "id": 270,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1709:2:1"
+              "src": "1709:2:4"
             },
             "returnParameters": {
-              "id": 123,
+              "id": 273,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 122,
+                  "id": 272,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 127,
-                  "src": "1733:10:1",
+                  "scope": 277,
+                  "src": "1733:10:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_Permission_$22",
+                    "typeIdentifier": "t_enum$_Permission_$172",
                     "typeString": "enum ResourceRental.Permission"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 121,
+                    "id": 271,
                     "name": "Permission",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 22,
-                    "src": "1733:10:1",
+                    "referencedDeclaration": 172,
+                    "src": "1733:10:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_Permission_$22",
+                      "typeIdentifier": "t_enum$_Permission_$172",
                       "typeString": "enum ResourceRental.Permission"
                     }
                   },
@@ -1688,19 +1688,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1732:12:1"
+              "src": "1732:12:4"
             },
-            "scope": 140,
-            "src": "1671:116:1",
+            "scope": 290,
+            "src": "1671:116:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 138,
+              "id": 288,
               "nodeType": "Block",
-              "src": "1812:79:1",
+              "src": "1812:79:4",
               "statements": [
                 {
                   "expression": {
@@ -1712,7 +1712,7 @@
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         },
-                        "id": 133,
+                        "id": 283,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1721,18 +1721,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 130,
+                            "id": 280,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 155,
-                            "src": "1830:3:1",
+                            "referencedDeclaration": 413,
+                            "src": "1830:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 131,
+                          "id": 281,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1740,7 +1740,7 @@
                           "memberName": "sender",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": null,
-                          "src": "1830:10:1",
+                          "src": "1830:10:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address_payable",
                             "typeString": "address payable"
@@ -1750,18 +1750,18 @@
                         "operator": "==",
                         "rightExpression": {
                           "argumentTypes": null,
-                          "id": 132,
+                          "id": 282,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 6,
-                          "src": "1844:5:1",
+                          "referencedDeclaration": 156,
+                          "src": "1844:5:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "src": "1830:19:1",
+                        "src": "1830:19:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -1770,14 +1770,14 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "43616c6c6572206973206e6f74206f776e6572",
-                        "id": 134,
+                        "id": 284,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "1851:21:1",
+                        "src": "1851:21:4",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
@@ -1797,21 +1797,21 @@
                           "typeString": "literal_string \"Caller is not owner\""
                         }
                       ],
-                      "id": 129,
+                      "id": 279,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        158,
-                        159
+                        416,
+                        417
                       ],
-                      "referencedDeclaration": 159,
-                      "src": "1822:7:1",
+                      "referencedDeclaration": 417,
+                      "src": "1822:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
                       }
                     },
-                    "id": 135,
+                    "id": 285,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1819,49 +1819,49 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1822:51:1",
+                    "src": "1822:51:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 136,
+                  "id": 286,
                   "nodeType": "ExpressionStatement",
-                  "src": "1822:51:1"
+                  "src": "1822:51:4"
                 },
                 {
-                  "id": 137,
+                  "id": 287,
                   "nodeType": "PlaceholderStatement",
-                  "src": "1883:1:1"
+                  "src": "1883:1:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 139,
+            "id": 289,
             "name": "isOwner",
             "nodeType": "ModifierDefinition",
             "parameters": {
-              "id": 128,
+              "id": 278,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1809:2:1"
+              "src": "1809:2:4"
             },
-            "src": "1793:98:1",
+            "src": "1793:98:4",
             "visibility": "internal"
           }
         ],
-        "scope": 141,
-        "src": "26:1867:1"
+        "scope": 291,
+        "src": "26:1867:4"
       }
     ],
-    "src": "0:1894:1"
+    "src": "0:1894:4"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "project:/contracts/ResourceRental.sol",
+      "absolutePath": "project:/contracts/ResourceRentalBase.sol",
       "exportedSymbols": {
         "ResourceRental": [
-          140
+          290
         ]
       }
     },
@@ -1875,9 +1875,9 @@
             ".16"
           ]
         },
-        "id": 4,
+        "id": 154,
         "name": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:4"
       },
       {
         "attributes": {
@@ -1891,17 +1891,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            140
+            290
           ],
           "name": "ResourceRental",
-          "scope": 141
+          "scope": 291
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "owner",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1915,20 +1915,20 @@
                   "stateMutability": "nonpayable",
                   "type": "address"
                 },
-                "id": 5,
+                "id": 155,
                 "name": "ElementaryTypeName",
-                "src": "56:7:1"
+                "src": "56:7:4"
               }
             ],
-            "id": 6,
+            "id": 156,
             "name": "VariableDeclaration",
-            "src": "56:13:1"
+            "src": "56:13:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "currentRenter",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "address",
@@ -1942,20 +1942,20 @@
                   "stateMutability": "nonpayable",
                   "type": "address"
                 },
-                "id": 7,
+                "id": 157,
                 "name": "ElementaryTypeName",
-                "src": "75:7:1"
+                "src": "75:7:4"
               }
             ],
-            "id": 8,
+            "id": 158,
             "name": "VariableDeclaration",
-            "src": "75:21:1"
+            "src": "75:21:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "fromTimestamp",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1968,20 +1968,20 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 9,
+                "id": 159,
                 "name": "ElementaryTypeName",
-                "src": "102:7:1"
+                "src": "102:7:4"
               }
             ],
-            "id": 10,
+            "id": 160,
             "name": "VariableDeclaration",
-            "src": "102:21:1"
+            "src": "102:21:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "toTimestamp",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -1994,20 +1994,20 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 11,
+                "id": 161,
                 "name": "ElementaryTypeName",
-                "src": "129:7:1"
+                "src": "129:7:4"
               }
             ],
-            "id": 12,
+            "id": 162,
             "name": "VariableDeclaration",
-            "src": "129:19:1"
+            "src": "129:19:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "maxRentTime",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -2020,20 +2020,20 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 13,
+                "id": 163,
                 "name": "ElementaryTypeName",
-                "src": "154:7:1"
+                "src": "154:7:4"
               }
             ],
-            "id": 14,
+            "id": 164,
             "name": "VariableDeclaration",
-            "src": "154:19:1"
+            "src": "154:19:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "offsetBookingTime",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "uint256",
@@ -2046,20 +2046,20 @@
                   "name": "uint256",
                   "type": "uint256"
                 },
-                "id": 15,
+                "id": 165,
                 "name": "ElementaryTypeName",
-                "src": "179:7:1"
+                "src": "179:7:4"
               }
             ],
-            "id": 16,
+            "id": 166,
             "name": "VariableDeclaration",
-            "src": "179:25:1"
+            "src": "179:25:4"
           },
           {
             "attributes": {
               "constant": false,
               "name": "resourcePermission",
-              "scope": 140,
+              "scope": 290,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "enum ResourceRental.Permission",
@@ -2071,17 +2071,17 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Permission",
-                  "referencedDeclaration": 22,
+                  "referencedDeclaration": 172,
                   "type": "enum ResourceRental.Permission"
                 },
-                "id": 17,
+                "id": 167,
                 "name": "UserDefinedTypeName",
-                "src": "210:10:1"
+                "src": "210:10:4"
               }
             ],
-            "id": 18,
+            "id": 168,
             "name": "VariableDeclaration",
-            "src": "210:29:1"
+            "src": "210:29:4"
           },
           {
             "attributes": {
@@ -2093,30 +2093,30 @@
                 "attributes": {
                   "name": "STUDENT"
                 },
-                "id": 19,
+                "id": 169,
                 "name": "EnumValue",
-                "src": "272:7:1"
+                "src": "272:7:4"
               },
               {
                 "attributes": {
                   "name": "SCIENTIFIC_ASSISTANT"
                 },
-                "id": 20,
+                "id": 170,
                 "name": "EnumValue",
-                "src": "289:20:1"
+                "src": "289:20:4"
               },
               {
                 "attributes": {
                   "name": "PROFESSOR"
                 },
-                "id": 21,
+                "id": 171,
                 "name": "EnumValue",
-                "src": "319:9:1"
+                "src": "319:9:4"
               }
             ],
-            "id": 22,
+            "id": 172,
             "name": "EnumDefinition",
-            "src": "246:88:1"
+            "src": "246:88:4"
           },
           {
             "attributes": {
@@ -2128,7 +2128,7 @@
                 null
               ],
               "name": "",
-              "scope": 140,
+              "scope": 290,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2140,7 +2140,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "permissionInput",
-                      "scope": 49,
+                      "scope": 199,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum ResourceRental.Permission",
@@ -2152,23 +2152,23 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "Permission",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 172,
                           "type": "enum ResourceRental.Permission"
                         },
-                        "id": 23,
+                        "id": 173,
                         "name": "UserDefinedTypeName",
-                        "src": "361:10:1"
+                        "src": "361:10:4"
                       }
                     ],
-                    "id": 24,
+                    "id": 174,
                     "name": "VariableDeclaration",
-                    "src": "361:26:1"
+                    "src": "361:26:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "maxRentTimeInput",
-                      "scope": 49,
+                      "scope": 199,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2181,20 +2181,20 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 25,
+                        "id": 175,
                         "name": "ElementaryTypeName",
-                        "src": "397:7:1"
+                        "src": "397:7:4"
                       }
                     ],
-                    "id": 26,
+                    "id": 176,
                     "name": "VariableDeclaration",
-                    "src": "397:24:1"
+                    "src": "397:24:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "offsetBookingTimeInput",
-                      "scope": 49,
+                      "scope": 199,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2207,19 +2207,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 27,
+                        "id": 177,
                         "name": "ElementaryTypeName",
-                        "src": "431:7:1"
+                        "src": "431:7:4"
                       }
                     ],
-                    "id": 28,
+                    "id": 178,
                     "name": "VariableDeclaration",
-                    "src": "431:30:1"
+                    "src": "431:30:4"
                   }
                 ],
-                "id": 29,
+                "id": 179,
                 "name": "ParameterList",
-                "src": "351:116:1"
+                "src": "351:116:4"
               },
               {
                 "attributes": {
@@ -2228,9 +2228,9 @@
                   ]
                 },
                 "children": [],
-                "id": 30,
+                "id": 180,
                 "name": "ParameterList",
-                "src": "475:0:1"
+                "src": "475:0:4"
               },
               {
                 "children": [
@@ -2253,13 +2253,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 6,
+                              "referencedDeclaration": 156,
                               "type": "address",
                               "value": "owner"
                             },
-                            "id": 31,
+                            "id": 181,
                             "name": "Identifier",
-                            "src": "485:5:1"
+                            "src": "485:5:4"
                           },
                           {
                             "attributes": {
@@ -2279,28 +2279,28 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 155,
+                                  "referencedDeclaration": 413,
                                   "type": "msg",
                                   "value": "msg"
                                 },
-                                "id": 32,
+                                "id": 182,
                                 "name": "Identifier",
-                                "src": "493:3:1"
+                                "src": "493:3:4"
                               }
                             ],
-                            "id": 33,
+                            "id": 183,
                             "name": "MemberAccess",
-                            "src": "493:10:1"
+                            "src": "493:10:4"
                           }
                         ],
-                        "id": 34,
+                        "id": 184,
                         "name": "Assignment",
-                        "src": "485:18:1"
+                        "src": "485:18:4"
                       }
                     ],
-                    "id": 35,
+                    "id": 185,
                     "name": "ExpressionStatement",
-                    "src": "485:18:1"
+                    "src": "485:18:4"
                   },
                   {
                     "children": [
@@ -2321,13 +2321,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 14,
+                              "referencedDeclaration": 164,
                               "type": "uint256",
                               "value": "maxRentTime"
                             },
-                            "id": 36,
+                            "id": 186,
                             "name": "Identifier",
-                            "src": "513:11:1"
+                            "src": "513:11:4"
                           },
                           {
                             "attributes": {
@@ -2335,23 +2335,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 26,
+                              "referencedDeclaration": 176,
                               "type": "uint256",
                               "value": "maxRentTimeInput"
                             },
-                            "id": 37,
+                            "id": 187,
                             "name": "Identifier",
-                            "src": "527:16:1"
+                            "src": "527:16:4"
                           }
                         ],
-                        "id": 38,
+                        "id": 188,
                         "name": "Assignment",
-                        "src": "513:30:1"
+                        "src": "513:30:4"
                       }
                     ],
-                    "id": 39,
+                    "id": 189,
                     "name": "ExpressionStatement",
-                    "src": "513:30:1"
+                    "src": "513:30:4"
                   },
                   {
                     "children": [
@@ -2372,13 +2372,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 16,
+                              "referencedDeclaration": 166,
                               "type": "uint256",
                               "value": "offsetBookingTime"
                             },
-                            "id": 40,
+                            "id": 190,
                             "name": "Identifier",
-                            "src": "553:17:1"
+                            "src": "553:17:4"
                           },
                           {
                             "attributes": {
@@ -2386,23 +2386,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 28,
+                              "referencedDeclaration": 178,
                               "type": "uint256",
                               "value": "offsetBookingTimeInput"
                             },
-                            "id": 41,
+                            "id": 191,
                             "name": "Identifier",
-                            "src": "573:22:1"
+                            "src": "573:22:4"
                           }
                         ],
-                        "id": 42,
+                        "id": 192,
                         "name": "Assignment",
-                        "src": "553:42:1"
+                        "src": "553:42:4"
                       }
                     ],
-                    "id": 43,
+                    "id": 193,
                     "name": "ExpressionStatement",
-                    "src": "553:42:1"
+                    "src": "553:42:4"
                   },
                   {
                     "children": [
@@ -2423,13 +2423,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 18,
+                              "referencedDeclaration": 168,
                               "type": "enum ResourceRental.Permission",
                               "value": "resourcePermission"
                             },
-                            "id": 44,
+                            "id": 194,
                             "name": "Identifier",
-                            "src": "605:18:1"
+                            "src": "605:18:4"
                           },
                           {
                             "attributes": {
@@ -2437,33 +2437,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 24,
+                              "referencedDeclaration": 174,
                               "type": "enum ResourceRental.Permission",
                               "value": "permissionInput"
                             },
-                            "id": 45,
+                            "id": 195,
                             "name": "Identifier",
-                            "src": "626:15:1"
+                            "src": "626:15:4"
                           }
                         ],
-                        "id": 46,
+                        "id": 196,
                         "name": "Assignment",
-                        "src": "605:36:1"
+                        "src": "605:36:4"
                       }
                     ],
-                    "id": 47,
+                    "id": 197,
                     "name": "ExpressionStatement",
-                    "src": "605:36:1"
+                    "src": "605:36:4"
                   }
                 ],
-                "id": 48,
+                "id": 198,
                 "name": "Block",
-                "src": "475:173:1"
+                "src": "475:173:4"
               }
             ],
-            "id": 49,
+            "id": 199,
             "name": "FunctionDefinition",
-            "src": "340:308:1"
+            "src": "340:308:4"
           },
           {
             "attributes": {
@@ -2479,7 +2479,7 @@
                       "constant": false,
                       "indexed": false,
                       "name": "fromTimeStamp",
-                      "scope": 59,
+                      "scope": 209,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2492,21 +2492,21 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 50,
+                        "id": 200,
                         "name": "ElementaryTypeName",
-                        "src": "684:7:1"
+                        "src": "684:7:4"
                       }
                     ],
-                    "id": 51,
+                    "id": 201,
                     "name": "VariableDeclaration",
-                    "src": "684:21:1"
+                    "src": "684:21:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "toTimeStamp",
-                      "scope": 59,
+                      "scope": 209,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2519,21 +2519,21 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 52,
+                        "id": 202,
                         "name": "ElementaryTypeName",
-                        "src": "715:7:1"
+                        "src": "715:7:4"
                       }
                     ],
-                    "id": 53,
+                    "id": 203,
                     "name": "VariableDeclaration",
-                    "src": "715:19:1"
+                    "src": "715:19:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "renterAddress",
-                      "scope": 59,
+                      "scope": 209,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2547,21 +2547,21 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 54,
+                        "id": 204,
                         "name": "ElementaryTypeName",
-                        "src": "744:7:1"
+                        "src": "744:7:4"
                       }
                     ],
-                    "id": 55,
+                    "id": 205,
                     "name": "VariableDeclaration",
-                    "src": "744:21:1"
+                    "src": "744:21:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "indexed": false,
                       "name": "renterPermission",
-                      "scope": 59,
+                      "scope": 209,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum ResourceRental.Permission",
@@ -2573,27 +2573,27 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "Permission",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 172,
                           "type": "enum ResourceRental.Permission"
                         },
-                        "id": 56,
+                        "id": 206,
                         "name": "UserDefinedTypeName",
-                        "src": "775:10:1"
+                        "src": "775:10:4"
                       }
                     ],
-                    "id": 57,
+                    "id": 207,
                     "name": "VariableDeclaration",
-                    "src": "775:27:1"
+                    "src": "775:27:4"
                   }
                 ],
-                "id": 58,
+                "id": 208,
                 "name": "ParameterList",
-                "src": "674:134:1"
+                "src": "674:134:4"
               }
             ],
-            "id": 59,
+            "id": 209,
             "name": "EventDefinition",
-            "src": "654:155:1"
+            "src": "654:155:4"
           },
           {
             "attributes": {
@@ -2605,7 +2605,7 @@
                 null
               ],
               "name": "createBooking",
-              "scope": 140,
+              "scope": 290,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -2617,7 +2617,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "fromTimeStampInput",
-                      "scope": 111,
+                      "scope": 261,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2630,20 +2630,20 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 60,
+                        "id": 210,
                         "name": "ElementaryTypeName",
-                        "src": "847:7:1"
+                        "src": "847:7:4"
                       }
                     ],
-                    "id": 61,
+                    "id": 211,
                     "name": "VariableDeclaration",
-                    "src": "847:26:1"
+                    "src": "847:26:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "toTimeStampInput",
-                      "scope": 111,
+                      "scope": 261,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -2656,20 +2656,20 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 62,
+                        "id": 212,
                         "name": "ElementaryTypeName",
-                        "src": "883:7:1"
+                        "src": "883:7:4"
                       }
                     ],
-                    "id": 63,
+                    "id": 213,
                     "name": "VariableDeclaration",
-                    "src": "883:24:1"
+                    "src": "883:24:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "renterAddress",
-                      "scope": 111,
+                      "scope": 261,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -2683,20 +2683,20 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 64,
+                        "id": 214,
                         "name": "ElementaryTypeName",
-                        "src": "917:7:1"
+                        "src": "917:7:4"
                       }
                     ],
-                    "id": 65,
+                    "id": 215,
                     "name": "VariableDeclaration",
-                    "src": "917:21:1"
+                    "src": "917:21:4"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "renterPermission",
-                      "scope": 111,
+                      "scope": 261,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum ResourceRental.Permission",
@@ -2708,22 +2708,22 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "Permission",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 172,
                           "type": "enum ResourceRental.Permission"
                         },
-                        "id": 66,
+                        "id": 216,
                         "name": "UserDefinedTypeName",
-                        "src": "948:10:1"
+                        "src": "948:10:4"
                       }
                     ],
-                    "id": 67,
+                    "id": 217,
                     "name": "VariableDeclaration",
-                    "src": "948:27:1"
+                    "src": "948:27:4"
                   }
                 ],
-                "id": 68,
+                "id": 218,
                 "name": "ParameterList",
-                "src": "837:144:1"
+                "src": "837:144:4"
               },
               {
                 "attributes": {
@@ -2732,9 +2732,9 @@
                   ]
                 },
                 "children": [],
-                "id": 69,
+                "id": 219,
                 "name": "ParameterList",
-                "src": "989:0:1"
+                "src": "989:0:4"
               },
               {
                 "children": [
@@ -2768,16 +2768,16 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                158,
-                                159
+                                416,
+                                417
                               ],
-                              "referencedDeclaration": 159,
+                              "referencedDeclaration": 417,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 70,
+                            "id": 220,
                             "name": "Identifier",
-                            "src": "999:7:1"
+                            "src": "999:7:4"
                           },
                           {
                             "attributes": {
@@ -2812,18 +2812,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 145,
+                                      "referencedDeclaration": 403,
                                       "type": "block",
                                       "value": "block"
                                     },
-                                    "id": 71,
+                                    "id": 221,
                                     "name": "Identifier",
-                                    "src": "1020:5:1"
+                                    "src": "1020:5:4"
                                   }
                                 ],
-                                "id": 72,
+                                "id": 222,
                                 "name": "MemberAccess",
-                                "src": "1020:15:1"
+                                "src": "1020:15:4"
                               },
                               {
                                 "attributes": {
@@ -2857,13 +2857,13 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 16,
+                                          "referencedDeclaration": 166,
                                           "type": "uint256",
                                           "value": "offsetBookingTime"
                                         },
-                                        "id": 73,
+                                        "id": 223,
                                         "name": "Identifier",
-                                        "src": "1039:17:1"
+                                        "src": "1039:17:4"
                                       },
                                       {
                                         "attributes": {
@@ -2895,9 +2895,9 @@
                                               "type": "type(uint256)",
                                               "value": "uint256"
                                             },
-                                            "id": 74,
+                                            "id": 224,
                                             "name": "ElementaryTypeNameExpression",
-                                            "src": "1059:7:1"
+                                            "src": "1059:7:4"
                                           },
                                           {
                                             "attributes": {
@@ -2905,33 +2905,33 @@
                                               "overloadedDeclarations": [
                                                 null
                                               ],
-                                              "referencedDeclaration": 61,
+                                              "referencedDeclaration": 211,
                                               "type": "uint256",
                                               "value": "fromTimeStampInput"
                                             },
-                                            "id": 75,
+                                            "id": 225,
                                             "name": "Identifier",
-                                            "src": "1067:18:1"
+                                            "src": "1067:18:4"
                                           }
                                         ],
-                                        "id": 76,
+                                        "id": 226,
                                         "name": "FunctionCall",
-                                        "src": "1059:27:1"
+                                        "src": "1059:27:4"
                                       }
                                     ],
-                                    "id": 77,
+                                    "id": 227,
                                     "name": "BinaryOperation",
-                                    "src": "1039:47:1"
+                                    "src": "1039:47:4"
                                   }
                                 ],
-                                "id": 78,
+                                "id": 228,
                                 "name": "TupleExpression",
-                                "src": "1038:49:1"
+                                "src": "1038:49:4"
                               }
                             ],
-                            "id": 79,
+                            "id": 229,
                             "name": "BinaryOperation",
-                            "src": "1020:67:1"
+                            "src": "1020:67:4"
                           },
                           {
                             "attributes": {
@@ -2946,19 +2946,19 @@
                               "type": "literal_string \"The rental must be in future\"",
                               "value": "The rental must be in future"
                             },
-                            "id": 80,
+                            "id": 230,
                             "name": "Literal",
-                            "src": "1101:30:1"
+                            "src": "1101:30:4"
                           }
                         ],
-                        "id": 81,
+                        "id": 231,
                         "name": "FunctionCall",
-                        "src": "999:142:1"
+                        "src": "999:142:4"
                       }
                     ],
-                    "id": 82,
+                    "id": 232,
                     "name": "ExpressionStatement",
-                    "src": "999:142:1"
+                    "src": "999:142:4"
                   },
                   {
                     "children": [
@@ -2990,16 +2990,16 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                158,
-                                159
+                                416,
+                                417
                               ],
-                              "referencedDeclaration": 159,
+                              "referencedDeclaration": 417,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 83,
+                            "id": 233,
                             "name": "Identifier",
-                            "src": "1152:7:1"
+                            "src": "1152:7:4"
                           },
                           {
                             "attributes": {
@@ -3016,7 +3016,7 @@
                                 "attributes": {
                                   "argumentTypes": null,
                                   "commonType": {
-                                    "typeIdentifier": "t_enum$_Permission_$22",
+                                    "typeIdentifier": "t_enum$_Permission_$172",
                                     "typeString": "enum ResourceRental.Permission"
                                   },
                                   "isConstant": false,
@@ -3033,13 +3033,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 67,
+                                      "referencedDeclaration": 217,
                                       "type": "enum ResourceRental.Permission",
                                       "value": "renterPermission"
                                     },
-                                    "id": 84,
+                                    "id": 234,
                                     "name": "Identifier",
-                                    "src": "1174:16:1"
+                                    "src": "1174:16:4"
                                   },
                                   {
                                     "attributes": {
@@ -3047,23 +3047,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 18,
+                                      "referencedDeclaration": 168,
                                       "type": "enum ResourceRental.Permission",
                                       "value": "resourcePermission"
                                     },
-                                    "id": 85,
+                                    "id": 235,
                                     "name": "Identifier",
-                                    "src": "1194:18:1"
+                                    "src": "1194:18:4"
                                   }
                                 ],
-                                "id": 86,
+                                "id": 236,
                                 "name": "BinaryOperation",
-                                "src": "1174:38:1"
+                                "src": "1174:38:4"
                               }
                             ],
-                            "id": 87,
+                            "id": 237,
                             "name": "TupleExpression",
-                            "src": "1173:40:1"
+                            "src": "1173:40:4"
                           },
                           {
                             "attributes": {
@@ -3078,19 +3078,19 @@
                               "type": "literal_string \"The User is allowed to book the room\"",
                               "value": "The User is allowed to book the room"
                             },
-                            "id": 88,
+                            "id": 238,
                             "name": "Literal",
-                            "src": "1227:38:1"
+                            "src": "1227:38:4"
                           }
                         ],
-                        "id": 89,
+                        "id": 239,
                         "name": "FunctionCall",
-                        "src": "1152:123:1"
+                        "src": "1152:123:4"
                       }
                     ],
-                    "id": 90,
+                    "id": 240,
                     "name": "ExpressionStatement",
-                    "src": "1152:123:1"
+                    "src": "1152:123:4"
                   },
                   {
                     "children": [
@@ -3111,13 +3111,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 8,
+                              "referencedDeclaration": 158,
                               "type": "address",
                               "value": "currentRenter"
                             },
-                            "id": 91,
+                            "id": 241,
                             "name": "Identifier",
-                            "src": "1286:13:1"
+                            "src": "1286:13:4"
                           },
                           {
                             "attributes": {
@@ -3125,23 +3125,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 65,
+                              "referencedDeclaration": 215,
                               "type": "address",
                               "value": "renterAddress"
                             },
-                            "id": 92,
+                            "id": 242,
                             "name": "Identifier",
-                            "src": "1302:13:1"
+                            "src": "1302:13:4"
                           }
                         ],
-                        "id": 93,
+                        "id": 243,
                         "name": "Assignment",
-                        "src": "1286:29:1"
+                        "src": "1286:29:4"
                       }
                     ],
-                    "id": 94,
+                    "id": 244,
                     "name": "ExpressionStatement",
-                    "src": "1286:29:1"
+                    "src": "1286:29:4"
                   },
                   {
                     "children": [
@@ -3162,13 +3162,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 10,
+                              "referencedDeclaration": 160,
                               "type": "uint256",
                               "value": "fromTimestamp"
                             },
-                            "id": 95,
+                            "id": 245,
                             "name": "Identifier",
-                            "src": "1325:13:1"
+                            "src": "1325:13:4"
                           },
                           {
                             "attributes": {
@@ -3176,23 +3176,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 61,
+                              "referencedDeclaration": 211,
                               "type": "uint256",
                               "value": "fromTimeStampInput"
                             },
-                            "id": 96,
+                            "id": 246,
                             "name": "Identifier",
-                            "src": "1341:18:1"
+                            "src": "1341:18:4"
                           }
                         ],
-                        "id": 97,
+                        "id": 247,
                         "name": "Assignment",
-                        "src": "1325:34:1"
+                        "src": "1325:34:4"
                       }
                     ],
-                    "id": 98,
+                    "id": 248,
                     "name": "ExpressionStatement",
-                    "src": "1325:34:1"
+                    "src": "1325:34:4"
                   },
                   {
                     "children": [
@@ -3213,13 +3213,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 12,
+                              "referencedDeclaration": 162,
                               "type": "uint256",
                               "value": "toTimestamp"
                             },
-                            "id": 99,
+                            "id": 249,
                             "name": "Identifier",
-                            "src": "1369:11:1"
+                            "src": "1369:11:4"
                           },
                           {
                             "attributes": {
@@ -3227,23 +3227,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 63,
+                              "referencedDeclaration": 213,
                               "type": "uint256",
                               "value": "toTimeStampInput"
                             },
-                            "id": 100,
+                            "id": 250,
                             "name": "Identifier",
-                            "src": "1383:16:1"
+                            "src": "1383:16:4"
                           }
                         ],
-                        "id": 101,
+                        "id": 251,
                         "name": "Assignment",
-                        "src": "1369:30:1"
+                        "src": "1369:30:4"
                       }
                     ],
-                    "id": 102,
+                    "id": 252,
                     "name": "ExpressionStatement",
-                    "src": "1369:30:1"
+                    "src": "1369:30:4"
                   },
                   {
                     "children": [
@@ -3278,20 +3278,20 @@
                                   "typeString": "address"
                                 },
                                 {
-                                  "typeIdentifier": "t_enum$_Permission_$22",
+                                  "typeIdentifier": "t_enum$_Permission_$172",
                                   "typeString": "enum ResourceRental.Permission"
                                 }
                               ],
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 59,
+                              "referencedDeclaration": 209,
                               "type": "function (uint256,uint256,address,enum ResourceRental.Permission)",
                               "value": "BookingCreated"
                             },
-                            "id": 103,
+                            "id": 253,
                             "name": "Identifier",
-                            "src": "1415:14:1"
+                            "src": "1415:14:4"
                           },
                           {
                             "attributes": {
@@ -3299,13 +3299,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 61,
+                              "referencedDeclaration": 211,
                               "type": "uint256",
                               "value": "fromTimeStampInput"
                             },
-                            "id": 104,
+                            "id": 254,
                             "name": "Identifier",
-                            "src": "1443:18:1"
+                            "src": "1443:18:4"
                           },
                           {
                             "attributes": {
@@ -3313,13 +3313,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 63,
+                              "referencedDeclaration": 213,
                               "type": "uint256",
                               "value": "toTimeStampInput"
                             },
-                            "id": 105,
+                            "id": 255,
                             "name": "Identifier",
-                            "src": "1475:16:1"
+                            "src": "1475:16:4"
                           },
                           {
                             "attributes": {
@@ -3327,13 +3327,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 65,
+                              "referencedDeclaration": 215,
                               "type": "address",
                               "value": "renterAddress"
                             },
-                            "id": 106,
+                            "id": 256,
                             "name": "Identifier",
-                            "src": "1505:13:1"
+                            "src": "1505:13:4"
                           },
                           {
                             "attributes": {
@@ -3341,33 +3341,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 67,
+                              "referencedDeclaration": 217,
                               "type": "enum ResourceRental.Permission",
                               "value": "renterPermission"
                             },
-                            "id": 107,
+                            "id": 257,
                             "name": "Identifier",
-                            "src": "1532:16:1"
+                            "src": "1532:16:4"
                           }
                         ],
-                        "id": 108,
+                        "id": 258,
                         "name": "FunctionCall",
-                        "src": "1415:143:1"
+                        "src": "1415:143:4"
                       }
                     ],
-                    "id": 109,
+                    "id": 259,
                     "name": "EmitStatement",
-                    "src": "1410:148:1"
+                    "src": "1410:148:4"
                   }
                 ],
-                "id": 110,
+                "id": 260,
                 "name": "Block",
-                "src": "989:576:1"
+                "src": "989:576:4"
               }
             ],
-            "id": 111,
+            "id": 261,
             "name": "FunctionDefinition",
-            "src": "815:750:1"
+            "src": "815:750:4"
           },
           {
             "attributes": {
@@ -3379,7 +3379,7 @@
                 null
               ],
               "name": "getRentalRenter",
-              "scope": 140,
+              "scope": 290,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -3392,9 +3392,9 @@
                   ]
                 },
                 "children": [],
-                "id": 112,
+                "id": 262,
                 "name": "ParameterList",
-                "src": "1595:2:1"
+                "src": "1595:2:4"
               },
               {
                 "children": [
@@ -3402,7 +3402,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 119,
+                      "scope": 269,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -3416,25 +3416,25 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 113,
+                        "id": 263,
                         "name": "ElementaryTypeName",
-                        "src": "1619:7:1"
+                        "src": "1619:7:4"
                       }
                     ],
-                    "id": 114,
+                    "id": 264,
                     "name": "VariableDeclaration",
-                    "src": "1619:7:1"
+                    "src": "1619:7:4"
                   }
                 ],
-                "id": 115,
+                "id": 265,
                 "name": "ParameterList",
-                "src": "1618:9:1"
+                "src": "1618:9:4"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 115
+                      "functionReturnParameters": 265
                     },
                     "children": [
                       {
@@ -3443,28 +3443,28 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 8,
+                          "referencedDeclaration": 158,
                           "type": "address",
                           "value": "currentRenter"
                         },
-                        "id": 116,
+                        "id": 266,
                         "name": "Identifier",
-                        "src": "1645:13:1"
+                        "src": "1645:13:4"
                       }
                     ],
-                    "id": 117,
+                    "id": 267,
                     "name": "Return",
-                    "src": "1638:20:1"
+                    "src": "1638:20:4"
                   }
                 ],
-                "id": 118,
+                "id": 268,
                 "name": "Block",
-                "src": "1628:37:1"
+                "src": "1628:37:4"
               }
             ],
-            "id": 119,
+            "id": 269,
             "name": "FunctionDefinition",
-            "src": "1571:94:1"
+            "src": "1571:94:4"
           },
           {
             "attributes": {
@@ -3476,7 +3476,7 @@
                 null
               ],
               "name": "getResourceRequiredPermission",
-              "scope": 140,
+              "scope": 290,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
@@ -3489,9 +3489,9 @@
                   ]
                 },
                 "children": [],
-                "id": 120,
+                "id": 270,
                 "name": "ParameterList",
-                "src": "1709:2:1"
+                "src": "1709:2:4"
               },
               {
                 "children": [
@@ -3499,7 +3499,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 127,
+                      "scope": 277,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "enum ResourceRental.Permission",
@@ -3511,28 +3511,28 @@
                         "attributes": {
                           "contractScope": null,
                           "name": "Permission",
-                          "referencedDeclaration": 22,
+                          "referencedDeclaration": 172,
                           "type": "enum ResourceRental.Permission"
                         },
-                        "id": 121,
+                        "id": 271,
                         "name": "UserDefinedTypeName",
-                        "src": "1733:10:1"
+                        "src": "1733:10:4"
                       }
                     ],
-                    "id": 122,
+                    "id": 272,
                     "name": "VariableDeclaration",
-                    "src": "1733:10:1"
+                    "src": "1733:10:4"
                   }
                 ],
-                "id": 123,
+                "id": 273,
                 "name": "ParameterList",
-                "src": "1732:12:1"
+                "src": "1732:12:4"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 123
+                      "functionReturnParameters": 273
                     },
                     "children": [
                       {
@@ -3541,28 +3541,28 @@
                           "overloadedDeclarations": [
                             null
                           ],
-                          "referencedDeclaration": 18,
+                          "referencedDeclaration": 168,
                           "type": "enum ResourceRental.Permission",
                           "value": "resourcePermission"
                         },
-                        "id": 124,
+                        "id": 274,
                         "name": "Identifier",
-                        "src": "1762:18:1"
+                        "src": "1762:18:4"
                       }
                     ],
-                    "id": 125,
+                    "id": 275,
                     "name": "Return",
-                    "src": "1755:25:1"
+                    "src": "1755:25:4"
                   }
                 ],
-                "id": 126,
+                "id": 276,
                 "name": "Block",
-                "src": "1745:42:1"
+                "src": "1745:42:4"
               }
             ],
-            "id": 127,
+            "id": 277,
             "name": "FunctionDefinition",
-            "src": "1671:116:1"
+            "src": "1671:116:4"
           },
           {
             "attributes": {
@@ -3578,9 +3578,9 @@
                   ]
                 },
                 "children": [],
-                "id": 128,
+                "id": 278,
                 "name": "ParameterList",
-                "src": "1809:2:1"
+                "src": "1809:2:4"
               },
               {
                 "children": [
@@ -3614,16 +3614,16 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                158,
-                                159
+                                416,
+                                417
                               ],
-                              "referencedDeclaration": 159,
+                              "referencedDeclaration": 417,
                               "type": "function (bool,string memory) pure",
                               "value": "require"
                             },
-                            "id": 129,
+                            "id": 279,
                             "name": "Identifier",
-                            "src": "1822:7:1"
+                            "src": "1822:7:4"
                           },
                           {
                             "attributes": {
@@ -3658,18 +3658,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 155,
+                                      "referencedDeclaration": 413,
                                       "type": "msg",
                                       "value": "msg"
                                     },
-                                    "id": 130,
+                                    "id": 280,
                                     "name": "Identifier",
-                                    "src": "1830:3:1"
+                                    "src": "1830:3:4"
                                   }
                                 ],
-                                "id": 131,
+                                "id": 281,
                                 "name": "MemberAccess",
-                                "src": "1830:10:1"
+                                "src": "1830:10:4"
                               },
                               {
                                 "attributes": {
@@ -3677,18 +3677,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 6,
+                                  "referencedDeclaration": 156,
                                   "type": "address",
                                   "value": "owner"
                                 },
-                                "id": 132,
+                                "id": 282,
                                 "name": "Identifier",
-                                "src": "1844:5:1"
+                                "src": "1844:5:4"
                               }
                             ],
-                            "id": 133,
+                            "id": 283,
                             "name": "BinaryOperation",
-                            "src": "1830:19:1"
+                            "src": "1830:19:4"
                           },
                           {
                             "attributes": {
@@ -3703,59 +3703,52 @@
                               "type": "literal_string \"Caller is not owner\"",
                               "value": "Caller is not owner"
                             },
-                            "id": 134,
+                            "id": 284,
                             "name": "Literal",
-                            "src": "1851:21:1"
+                            "src": "1851:21:4"
                           }
                         ],
-                        "id": 135,
+                        "id": 285,
                         "name": "FunctionCall",
-                        "src": "1822:51:1"
+                        "src": "1822:51:4"
                       }
                     ],
-                    "id": 136,
+                    "id": 286,
                     "name": "ExpressionStatement",
-                    "src": "1822:51:1"
+                    "src": "1822:51:4"
                   },
                   {
-                    "id": 137,
+                    "id": 287,
                     "name": "PlaceholderStatement",
-                    "src": "1883:1:1"
+                    "src": "1883:1:4"
                   }
                 ],
-                "id": 138,
+                "id": 288,
                 "name": "Block",
-                "src": "1812:79:1"
+                "src": "1812:79:4"
               }
             ],
-            "id": 139,
+            "id": 289,
             "name": "ModifierDefinition",
-            "src": "1793:98:1"
+            "src": "1793:98:4"
           }
         ],
-        "id": 140,
+        "id": 290,
         "name": "ContractDefinition",
-        "src": "26:1867:1"
+        "src": "26:1867:4"
       }
     ],
-    "id": 141,
+    "id": 291,
     "name": "SourceUnit",
-    "src": "0:1894:1"
+    "src": "0:1894:4"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0x3bb0430fBB77549e34Ea97eCb28Ec33546E38483",
-      "transactionHash": "0x5b7c7bebaddf52224856f72c43291a50b774298d541a35aca02a33f0e0cf6c15"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-13T07:29:01.662Z",
+  "updatedAt": "2022-05-16T07:37:25.764Z",
   "devdoc": {
     "methods": {}
   },

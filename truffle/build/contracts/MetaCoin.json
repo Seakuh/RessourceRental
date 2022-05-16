@@ -337,7 +337,7 @@
                           "name": "tx",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 176,
+                          "referencedDeclaration": 425,
                           "src": "527:2:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_transaction",
@@ -468,7 +468,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 164,
+                          "referencedDeclaration": 413,
                           "src": "650:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -582,7 +582,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 164,
+                          "referencedDeclaration": 413,
                           "src": "697:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -724,7 +724,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 164,
+                          "referencedDeclaration": 413,
                           "src": "768:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1607,7 +1607,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 176,
+                                      "referencedDeclaration": 425,
                                       "type": "tx",
                                       "value": "tx"
                                     },
@@ -1835,7 +1835,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 164,
+                                      "referencedDeclaration": 413,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1959,7 +1959,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 164,
+                                      "referencedDeclaration": 413,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -2143,7 +2143,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 164,
+                                  "referencedDeclaration": 413,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -2628,19 +2628,9 @@
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {
-        "ConvertLib": "0xf3a76eFBC6d0a8a195471d8111512B3E1D641a9c"
-      },
-      "address": "0x2Bf3E0b8a8a1778E61644c1E9962afC72807EB27",
-      "transactionHash": "0x963e1b1dd2c3a0b846dbe1b6c8e8460347b04daa1105ed151494de1159110c3d"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-04T12:43:26.495Z",
-  "networkType": "ethereum",
+  "updatedAt": "2022-05-16T07:37:25.763Z",
   "devdoc": {
     "methods": {}
   },
