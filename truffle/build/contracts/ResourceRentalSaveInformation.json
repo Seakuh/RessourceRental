@@ -1,0 +1,122 @@
+{
+  "contractName": "ResourceRentalSaveInformation",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Resource_Rental_Save_Information.sol\":\"ResourceRentalSaveInformation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Resource_Rental_Save_Information.sol\":{\"keccak256\":\"0x7ff4608c393c1828a4ff69d9466a8a6118ff129b68904d7a4372c392ec4ad7be\",\"urls\":[\"bzz-raw://a611ca0c8902c16a8226a688deffe850c4de3d0d0978efb85caec02f21fa8d36\",\"dweb:/ipfs/QmWsZwJhtScjsFny7omLJtjbRvGwuW8uGjuHXtP4gowjfe\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158201864ae4f3d1f354c5d733eb0cf78e26c43b1c30d05207238fe9c82186e0f044964736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158201864ae4f3d1f354c5d733eb0cf78e26c43b1c30d05207238fe9c82186e0f044964736f6c63430005100032",
+  "sourceMap": "34:726:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:726:0;;;;;;;",
+  "deployedSourceMap": "34:726:0:-;;;;;",
+  "source": "pragma solidity >=0.4.25 <0.7.0;\n\ncontract ResourceRentalSaveInformation {\n    // struct Resource {\n    //     uint256 deviceId;\n    //     string deviceName;\n    //     bool loanable;\n    //     uint256 loanInterval;\n    //     uint256 deviceElectricityCostPerHour;\n    //     uint256 deviceCosts;\n    //     uint256 computingPower;\n    //     bool buyOut;\n    //     uint256 appraisedValue;\n    // }\n    // struct Booking {\n    // ;\n    // }\n    // mapping(address => uint256) public previousRenter;\n    // address public owner;\n    // mapping(address => Device) public devices;\n    // event BookingCreated(\n    //     uint256 fromTimeStamp,\n    //     uint256 toTimeStamp,\n    //     address renterAddress,\n    //     Permission renterPermission\n    // );\n}\n",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/Resource_Rental_Save_Information.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Resource_Rental_Save_Information.sol",
+    "exportedSymbols": {
+      "ResourceRentalSaveInformation": [
+        2
+      ]
+    },
+    "id": 3,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2,
+        "linearizedBaseContracts": [
+          2
+        ],
+        "name": "ResourceRentalSaveInformation",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3,
+        "src": "34:726:0"
+      }
+    ],
+    "src": "0:761:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Resource_Rental_Save_Information.sol",
+      "exportedSymbols": {
+        "ResourceRentalSaveInformation": [
+          2
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".25",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2
+          ],
+          "name": "ResourceRentalSaveInformation",
+          "nodes": [
+            null
+          ],
+          "scope": 3
+        },
+        "id": 2,
+        "name": "ContractDefinition",
+        "src": "34:726:0"
+      }
+    ],
+    "id": 3,
+    "name": "SourceUnit",
+    "src": "0:761:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-15T14:28:25.746Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

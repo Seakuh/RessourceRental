@@ -1,0 +1,926 @@
+{
+  "contractName": "ResourceRentalGetInformation",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maxRentTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "offsetBookingTime",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"maxRentTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"offsetBookingTime\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Resource_Rental_Get_Information.sol\":\"ResourceRentalGetInformation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Resource_Rental_Get_Information.sol\":{\"keccak256\":\"0x8e783cd9ca79963020435a14ad0ef90756dc750d5ddd6569324012ed74f8345c\",\"urls\":[\"bzz-raw://2039ea8cfb48f4ee528489774b8ec352b75a73578059a20376c881b80d0a0ef5\",\"dweb:/ipfs/QmW2y1cKFENofYwBbF6u5Js8RiNHhHVYmC9d4LRDvCVW3Q\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b5060405160a238038060a283398181016040526060811015602f57600080fd5b81019080805190602001909291908051906020019092919080519060200190929190505050505050603e8060646000396000f3fe6080604052600080fdfea265627a7a723158209e33d8d7e09cf27d6a8d65a5d00379e9e5fceb5737c448aba2c1e2184a5ea16b64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158209e33d8d7e09cf27d6a8d65a5d00379e9e5fceb5737c448aba2c1e2184a5ea16b64736f6c63430005100032",
+  "sourceMap": "34:729:1:-;;;521:114;8:9:-1;5:2;;;30:1;27;20:12;5:2;521:114:1;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;521:114:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;34:729;;;;;;",
+  "deployedSourceMap": "34:729:1:-;;;;;",
+  "source": "pragma solidity >=0.4.25 <0.7.0;\n\ncontract ResourceRentalGetInformation {\n    Resource resource;\n    Booking booking;\n    // address currentRenter;\n\n    // Permission resourcePermission;\n\n    enum Permission {\n        STUDENT,\n        SCIENTIFIC_ASSISTANT,\n        PROFESSOR\n    }\n\n    struct Booking {\n        uint256 fromTimestamp;\n        uint256 toTimestamp;\n    }\n\n    struct Resource {\n        address owner;\n        uint256 maxRentTime;\n        uint256 offsetBookingTime;\n        Permission permission;\n    }\n\n    constructor(\n        address owner,\n        uint256 maxRentTime,\n        uint256 offsetBookingTime\n    ) public {}\n\n    // Owner\n\n    // resource erstellen\n\n    // daten ändern\n\n    // addressen verifizieren\n\n    //\n\n    // schulung buchen\n}\n",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/Resource_Rental_Get_Information.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Resource_Rental_Get_Information.sol",
+    "exportedSymbols": {
+      "ResourceRentalGetInformation": [
+        69
+      ]
+    },
+    "id": 70,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 36,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".25",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 69,
+        "linearizedBaseContracts": [
+          69
+        ],
+        "name": "ResourceRentalGetInformation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 38,
+            "name": "resource",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "78:17:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Resource_$58_storage",
+              "typeString": "struct ResourceRentalGetInformation.Resource"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 37,
+              "name": "Resource",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 58,
+              "src": "78:8:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Resource_$58_storage_ptr",
+                "typeString": "struct ResourceRentalGetInformation.Resource"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 40,
+            "name": "booking",
+            "nodeType": "VariableDeclaration",
+            "scope": 69,
+            "src": "101:15:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Booking_$49_storage",
+              "typeString": "struct ResourceRentalGetInformation.Booking"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 39,
+              "name": "Booking",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 49,
+              "src": "101:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Booking_$49_storage_ptr",
+                "typeString": "struct ResourceRentalGetInformation.Booking"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "ResourceRentalGetInformation.Permission",
+            "id": 44,
+            "members": [
+              {
+                "id": 41,
+                "name": "STUDENT",
+                "nodeType": "EnumValue",
+                "src": "218:7:1"
+              },
+              {
+                "id": 42,
+                "name": "SCIENTIFIC_ASSISTANT",
+                "nodeType": "EnumValue",
+                "src": "235:20:1"
+              },
+              {
+                "id": 43,
+                "name": "PROFESSOR",
+                "nodeType": "EnumValue",
+                "src": "265:9:1"
+              }
+            ],
+            "name": "Permission",
+            "nodeType": "EnumDefinition",
+            "src": "192:88:1"
+          },
+          {
+            "canonicalName": "ResourceRentalGetInformation.Booking",
+            "id": 49,
+            "members": [
+              {
+                "constant": false,
+                "id": 46,
+                "name": "fromTimestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 49,
+                "src": "311:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 45,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "311:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 48,
+                "name": "toTimestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 49,
+                "src": "342:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 47,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "342:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Booking",
+            "nodeType": "StructDefinition",
+            "scope": 69,
+            "src": "286:82:1",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ResourceRentalGetInformation.Resource",
+            "id": 58,
+            "members": [
+              {
+                "constant": false,
+                "id": 51,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 58,
+                "src": "400:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 50,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "400:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 53,
+                "name": "maxRentTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 58,
+                "src": "423:19:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 52,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "423:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 55,
+                "name": "offsetBookingTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 58,
+                "src": "452:25:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 54,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "452:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 57,
+                "name": "permission",
+                "nodeType": "VariableDeclaration",
+                "scope": 58,
+                "src": "487:21:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Permission_$44",
+                  "typeString": "enum ResourceRentalGetInformation.Permission"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 56,
+                  "name": "Permission",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 44,
+                  "src": "487:10:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Permission_$44",
+                    "typeString": "enum ResourceRentalGetInformation.Permission"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Resource",
+            "nodeType": "StructDefinition",
+            "scope": 69,
+            "src": "374:141:1",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 67,
+              "nodeType": "Block",
+              "src": "633:2:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 68,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "542:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "542:7:1",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "maxRentTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "565:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "offsetBookingTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 68,
+                  "src": "594:25:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "594:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "532:93:1"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "633:0:1"
+            },
+            "scope": 69,
+            "src": "521:114:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 70,
+        "src": "34:729:1"
+      }
+    ],
+    "src": "0:764:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Resource_Rental_Get_Information.sol",
+      "exportedSymbols": {
+        "ResourceRentalGetInformation": [
+          69
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".25",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 36,
+        "name": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            69
+          ],
+          "name": "ResourceRentalGetInformation",
+          "scope": 70
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "resource",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct ResourceRentalGetInformation.Resource",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Resource",
+                  "referencedDeclaration": 58,
+                  "type": "struct ResourceRentalGetInformation.Resource"
+                },
+                "id": 37,
+                "name": "UserDefinedTypeName",
+                "src": "78:8:1"
+              }
+            ],
+            "id": 38,
+            "name": "VariableDeclaration",
+            "src": "78:17:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "booking",
+              "scope": 69,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct ResourceRentalGetInformation.Booking",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Booking",
+                  "referencedDeclaration": 49,
+                  "type": "struct ResourceRentalGetInformation.Booking"
+                },
+                "id": 39,
+                "name": "UserDefinedTypeName",
+                "src": "101:7:1"
+              }
+            ],
+            "id": 40,
+            "name": "VariableDeclaration",
+            "src": "101:15:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ResourceRentalGetInformation.Permission",
+              "name": "Permission"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "STUDENT"
+                },
+                "id": 41,
+                "name": "EnumValue",
+                "src": "218:7:1"
+              },
+              {
+                "attributes": {
+                  "name": "SCIENTIFIC_ASSISTANT"
+                },
+                "id": 42,
+                "name": "EnumValue",
+                "src": "235:20:1"
+              },
+              {
+                "attributes": {
+                  "name": "PROFESSOR"
+                },
+                "id": 43,
+                "name": "EnumValue",
+                "src": "265:9:1"
+              }
+            ],
+            "id": 44,
+            "name": "EnumDefinition",
+            "src": "192:88:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ResourceRentalGetInformation.Booking",
+              "name": "Booking",
+              "scope": 69,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "fromTimestamp",
+                  "scope": 49,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 45,
+                    "name": "ElementaryTypeName",
+                    "src": "311:7:1"
+                  }
+                ],
+                "id": 46,
+                "name": "VariableDeclaration",
+                "src": "311:21:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "toTimestamp",
+                  "scope": 49,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 47,
+                    "name": "ElementaryTypeName",
+                    "src": "342:7:1"
+                  }
+                ],
+                "id": 48,
+                "name": "VariableDeclaration",
+                "src": "342:19:1"
+              }
+            ],
+            "id": 49,
+            "name": "StructDefinition",
+            "src": "286:82:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ResourceRentalGetInformation.Resource",
+              "name": "Resource",
+              "scope": 69,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 58,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 50,
+                    "name": "ElementaryTypeName",
+                    "src": "400:7:1"
+                  }
+                ],
+                "id": 51,
+                "name": "VariableDeclaration",
+                "src": "400:13:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "maxRentTime",
+                  "scope": 58,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 52,
+                    "name": "ElementaryTypeName",
+                    "src": "423:7:1"
+                  }
+                ],
+                "id": 53,
+                "name": "VariableDeclaration",
+                "src": "423:19:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "offsetBookingTime",
+                  "scope": 58,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 54,
+                    "name": "ElementaryTypeName",
+                    "src": "452:7:1"
+                  }
+                ],
+                "id": 55,
+                "name": "VariableDeclaration",
+                "src": "452:25:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "permission",
+                  "scope": 58,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "enum ResourceRentalGetInformation.Permission",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Permission",
+                      "referencedDeclaration": 44,
+                      "type": "enum ResourceRentalGetInformation.Permission"
+                    },
+                    "id": 56,
+                    "name": "UserDefinedTypeName",
+                    "src": "487:10:1"
+                  }
+                ],
+                "id": 57,
+                "name": "VariableDeclaration",
+                "src": "487:21:1"
+              }
+            ],
+            "id": 58,
+            "name": "StructDefinition",
+            "src": "374:141:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 69,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "owner",
+                      "scope": 68,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 59,
+                        "name": "ElementaryTypeName",
+                        "src": "542:7:1"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "VariableDeclaration",
+                    "src": "542:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "maxRentTime",
+                      "scope": 68,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 61,
+                        "name": "ElementaryTypeName",
+                        "src": "565:7:1"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "VariableDeclaration",
+                    "src": "565:19:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "offsetBookingTime",
+                      "scope": 68,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 63,
+                        "name": "ElementaryTypeName",
+                        "src": "594:7:1"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "VariableDeclaration",
+                    "src": "594:25:1"
+                  }
+                ],
+                "id": 65,
+                "name": "ParameterList",
+                "src": "532:93:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 66,
+                "name": "ParameterList",
+                "src": "633:0:1"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 67,
+                "name": "Block",
+                "src": "633:2:1"
+              }
+            ],
+            "id": 68,
+            "name": "FunctionDefinition",
+            "src": "521:114:1"
+          }
+        ],
+        "id": 69,
+        "name": "ContractDefinition",
+        "src": "34:729:1"
+      }
+    ],
+    "id": 70,
+    "name": "SourceUnit",
+    "src": "0:764:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-05-14T09:15:33.596Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
