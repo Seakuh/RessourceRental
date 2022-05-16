@@ -11,11 +11,24 @@ contract ResourceRentalUniversity {
     // Resource Information
 
     // University Params
-
-    address university;
+    address public university;
 
     // uint256 fromTimestamp;
     // uint256 toTimestamp;
+
+    struct Resource {
+        uint256 resourceId;
+        string resourceName;
+        bool loanable;
+        uint256 loanInterval;
+        uint256 resourceElectricityCostPerHour;
+        uint256 resourceCosts;
+        uint256 computingPower;
+        bool buyOut;
+        uint256 appraisedValue;
+    }
+
+    mapping(uint256 => Resource) public resources;
 
     enum Permission {
         STUDENT,
@@ -23,6 +36,7 @@ contract ResourceRentalUniversity {
         PROFESSOR
     }
 
+    //constructor
     constructor() public {
         university = msg.sender;
     }
