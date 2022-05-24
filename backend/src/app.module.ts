@@ -14,6 +14,11 @@ import { RoomsModule } from './rooms/rooms.module';
     DevicesModule,
     RoomsModule,
     BookingsModule,
+    // EthersModule.forRoot(),
+    // Web3Module.forRoot({
+    //   name: 'eth',
+    //   url: 'http://localhost:3450',
+    // }),
 
     TypeOrmModule.forRoot({
       type: 'mysql',

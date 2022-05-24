@@ -18,14 +18,15 @@ export class BookingsService {
     throw new Error('Method not implemented.');
   }
   createBooking(createBookingDto: CreateBookingDto) {
-    if (
-      this.isDeviceAvailable(
-        createBookingDto.fromDate,
-        createBookingDto.toDate,
-        createBookingDto.resourceId,
-      )
-    ) {
-    }
+    // if (
+    //   this.isDeviceAvailable(
+    //     createBookingDto.fromDate,
+    //     createBookingDto.toDate,
+    //     createBookingDto.resourceId,
+    //   )
+    // ) {
+    // }
+    console.log('SERVICE CREATE BOOKING ');
     return this.bookingRepository.createBooking(createBookingDto);
   }
 
