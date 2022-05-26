@@ -27,7 +27,14 @@ export class BookingsService {
     // ) {
     // }
     console.log('SERVICE CREATE BOOKING ');
-    return this.bookingRepository.createBooking(createBookingDto);
+    if (
+      this.isValidTimestamp(createBookingDto.fromDate) &&
+      this.isValidTimestamp(createBookingDto.toDate)
+    ) {
+      return this.bookingRepository.createBooking(createBookingDto);
+    }
+
+    return 'Timestamp is not valide';
   }
 
   createRoomBooking(createRoomBookingDto: CreateRoomBookingDto) {
@@ -56,7 +63,7 @@ export class BookingsService {
 
   // internal functions ---------------------------------------------------------
 
-  isDeviceAvailable(
+  isResourceAvailable(
     fromTimestamp: number,
     toTimeStamp: number,
     deviceId: string,
@@ -65,5 +72,11 @@ export class BookingsService {
 
     console.log(bookings);
     return true;
+  }
+
+  isValidTimestamp(_timestamp: number): boolean {
+    const valid = new Date(_timestamp).getTime() > 0;
+
+    return valid;
   }
 }
