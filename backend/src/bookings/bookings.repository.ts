@@ -13,7 +13,7 @@ export class BookingRepository {
   constructor(
     @InjectModel(Booking.name) private BookingModel: Model<BookingDocument>,
     @InjectModel(Room.name) private roomModel: Model<RoomDocument>,
-    @InjectModel(Device.name) private deviceModel: Model<DeviceDocument>,
+    @InjectModel(Device.name) private deviceModel: Model<DeviceDocument>, // @InjectModel(Resource.name) private resourceModel: Model<Resource>,
   ) {}
 
   // web3 = new Web3(Web3.givenProvider || 'ws://localhost:8545');
@@ -38,6 +38,7 @@ export class BookingRepository {
       createBooking.fromDate,
       createBooking.toDate,
     );
+
     console.log('VALIDE');
     console.log(validBooking);
 

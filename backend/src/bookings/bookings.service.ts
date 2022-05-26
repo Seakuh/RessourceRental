@@ -26,7 +26,6 @@ export class BookingsService {
     //   )
     // ) {
     // }
-    console.log('SERVICE CREATE BOOKING ');
     if (
       this.isValidTimestamp(createBookingDto.fromDate) &&
       this.isValidTimestamp(createBookingDto.toDate)

@@ -1,17 +1,17 @@
 export class CreateResourceDto {
-  deviceId: number;
-  resource: string;
+  resourceId: number;
+  name: string;
   loanable: boolean;
+  location: Location;
   loanInterval: number;
-  deviceElectricityCostPerHour?: number;
-  deviceCosts: number;
+  resourceCosts: number;
   computingPower?: number;
   buyOut?: boolean;
   appraisedValue: number;
   capacity: number;
-  costsPerHour: number;
-  size: number;
-  location: Location;
+  costsPerHour?: number;
+  size?: number;
+  resourceElectricityCostPerHour?: number;
   requiredSafetyBriefing?: string[];
   recurringAssignments: string;
   description?: string;
