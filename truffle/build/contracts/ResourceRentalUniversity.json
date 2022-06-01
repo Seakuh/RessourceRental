@@ -1,0 +1,4424 @@
+{
+  "contractName": "ResourceRentalUniversity",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "fromTimeStamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "toTimeStamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "renterAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum ResourceRentalUniversity.Permission",
+          "name": "renterPermission",
+          "type": "uint8"
+        }
+      ],
+      "name": "BookingCreated",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorities",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "resources",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "resourceId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "resourceName",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "loanable",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "loanInterval",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "resourceElectricityCostPerHour",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "resourceCosts",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "computingPower",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "buyOut",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "appraisedValue",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "university",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "addAuthority",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "fromTimeStampInput",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "toTimeStampInput",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "renterAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "enum ResourceRentalUniversity.Permission",
+          "name": "renterPermission",
+          "type": "uint8"
+        }
+      ],
+      "name": "createBooking",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getUniversity",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getResourceRequiredPermission",
+      "outputs": [
+        {
+          "internalType": "enum ResourceRentalUniversity.Permission",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"fromTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"toTimeStamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum ResourceRentalUniversity.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"BookingCreated\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"addAuthority\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"authorities\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"fromTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"toTimeStampInput\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"renterAddress\",\"type\":\"address\"},{\"internalType\":\"enum ResourceRentalUniversity.Permission\",\"name\":\"renterPermission\",\"type\":\"uint8\"}],\"name\":\"createBooking\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getResourceRequiredPermission\",\"outputs\":[{\"internalType\":\"enum ResourceRentalUniversity.Permission\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getUniversity\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"resources\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"resourceId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"resourceName\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"loanable\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"loanInterval\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"resourceElectricityCostPerHour\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"resourceCosts\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"computingPower\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"buyOut\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"appraisedValue\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"university\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ResourceRentalUniversity.sol\":\"ResourceRentalUniversity\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ResourceRentalUniversity.sol\":{\"keccak256\":\"0x2fcfc0166bbeb07fb62acef843368242c9c120f3f49eca1e0761a91be9a0c501\",\"urls\":[\"bzz-raw://29c2658b3f3c87007069c3adba291bd93819152056ea3046cf374e265dfeddb5\",\"dweb:/ipfs/QmP1JFaZd8Z2YivrpwcC51xmNfQa6v6EzBFrwnHNTGFNj8\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5033600460016101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506106c4806100616000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c8063ae12894e1161005b578063ae12894e14610226578063d40da06c14610270578063ea600a431461027a578063ecdd45d1146102c45761007d565b8063244d6daa1461008257806390a13e631461016957806391223d69146101ce575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506102f0565b604051808a815260200180602001891515151581526020018881526020018781526020018681526020018581526020018415151515815260200183815260200182810382528a818151815260200191508051906020019080838360005b8381101561012657808201518184015260208101905061010b565b50505050905090810190601f1680156101535780820380516001836020036101000a031916815260200191505b509a505050505050505050505060405180910390f35b6101cc6004803603608081101561017f57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff1690602001909291905050506103f0565b005b610210600480360360208110156101e457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105d3565b6040518082815260200191505060405180910390f35b61022e6105eb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610278610611565b005b610282610613565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102cc61063d565b604051808260028111156102dc57fe5b60ff16815260200191505060405180910390f35b6006602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a25780601f10610377576101008083540402835291602001916103a2565b820191906000526020600020905b81548152906001019060200180831161038557829003601f168201915b5050505050908060020160009054906101000a900460ff16908060030154908060040154908060050154908060060154908060070160009054906101000a900460ff16908060080154905089565b83600354014210610469576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600460009054906101000a900460ff16600281111561048457fe5b81600281111561049057fe5b10156104e7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806106436024913960400191505060405180910390fd5b6002548385011115610544576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260298152602001806106676029913960400191505060405180910390fd5b7f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156105b757fe5b60ff16815260200194505050505060405180910390a150505050565b60056020528060005260406000206000915090505481565b600460019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b565b6000600460019054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60009056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6d54686520626f6f6b696e672074696d652069732061626f766520746865206d617852656e7454696d65a265627a7a72315820d5c9f3ade9c67c21e0d37153cb130b73e0c2bd1299f172ea4c6881c8050e2c0e64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c8063ae12894e1161005b578063ae12894e14610226578063d40da06c14610270578063ea600a431461027a578063ecdd45d1146102c45761007d565b8063244d6daa1461008257806390a13e631461016957806391223d69146101ce575b600080fd5b6100ae6004803603602081101561009857600080fd5b81019080803590602001909291905050506102f0565b604051808a815260200180602001891515151581526020018881526020018781526020018681526020018581526020018415151515815260200183815260200182810382528a818151815260200191508051906020019080838360005b8381101561012657808201518184015260208101905061010b565b50505050905090810190601f1680156101535780820380516001836020036101000a031916815260200191505b509a505050505050505050505060405180910390f35b6101cc6004803603608081101561017f57600080fd5b810190808035906020019092919080359060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803560ff1690602001909291905050506103f0565b005b610210600480360360208110156101e457600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105d3565b6040518082815260200191505060405180910390f35b61022e6105eb565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b610278610611565b005b610282610613565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6102cc61063d565b604051808260028111156102dc57fe5b60ff16815260200191505060405180910390f35b6006602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103a25780601f10610377576101008083540402835291602001916103a2565b820191906000526020600020905b81548152906001019060200180831161038557829003601f168201915b5050505050908060020160009054906101000a900460ff16908060030154908060040154908060050154908060060154908060070160009054906101000a900460ff16908060080154905089565b83600354014210610469576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601c8152602001807f5468652072656e74616c206d75737420626520696e206675747572650000000081525060200191505060405180910390fd5b600460009054906101000a900460ff16600281111561048457fe5b81600281111561049057fe5b10156104e7576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260248152602001806106436024913960400191505060405180910390fd5b6002548385011115610544576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260298152602001806106676029913960400191505060405180910390fd5b7f280340e636ee1d3c807510d981da2e149655fbc2d173a72f91aba86cad25624384848484604051808581526020018481526020018373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018260028111156105b757fe5b60ff16815260200194505050505060405180910390a150505050565b60056020528060005260406000206000915090505481565b600460019054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b565b6000600460019054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b60009056fe546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6d54686520626f6f6b696e672074696d652069732061626f766520746865206d617852656e7454696d65a265627a7a72315820d5c9f3ade9c67c21e0d37153cb130b73e0c2bd1299f172ea4c6881c8050e2c0e64736f6c63430005100032",
+  "sourceMap": "26:2381:10:-;;;905:61;8:9:-1;5:2;;;30:1;27;20:12;5:2;905:61:10;949:10;936;;:23;;;;;;;;;;;;;;;;;;26:2381;;;;;;",
+  "deployedSourceMap": "26:2381:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:2381:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;741:45;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;741:45:10;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;741:45:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1011:779;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;1011:779:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;326:46;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;326:46:10;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;295:25;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;972:33;;;:::i;:::-;;1815:89;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1910:76;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;741:45;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1011:779::-;1263:18;1235:17;;:47;1216:15;:67;1195:142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1390:18;;;;;;;;;;;1370:38;;;;;;;;:16;:38;;;;;;;;;;1348:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1545:11;;1525:16;1504:18;:37;:52;;1482:142;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1640:143;1668:18;1700:16;1730:13;1757:16;1640:143;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1011:779;;;;:::o;326:46::-;;;;;;;;;;;;;;;;;:::o;295:25::-;;;;;;;;;;;;;:::o;972:33::-;:::o;1815:89::-;1861:7;1887:10;;;;;;;;;;;1880:17;;1815:89;:::o;1910:76::-;1972:10;1910:76;:::o",
+  "source": "pragma solidity ^0.5.16;\n\ncontract ResourceRentalUniversity {\n    // Config Variables\n    uint256 maxRooms;\n    uint256 maxAmountSmartContracts;\n    uint256 maxRentTime;\n    uint256 offsetBookingTime;\n    Permission resourcePermission;\n\n    // Resource Information\n\n    // University Intern\n    address public university;\n    mapping(address => uint256) public authorities;\n\n    // uint256 fromTimestamp;\n    // uint256 toTimestamp;\n\n    struct Resource {\n        uint256 resourceId;\n        string resourceName;\n        bool loanable;\n        uint256 loanInterval;\n        uint256 resourceElectricityCostPerHour;\n        uint256 resourceCosts;\n        uint256 computingPower;\n        bool buyOut;\n        uint256 appraisedValue;\n    }\n\n    mapping(uint256 => Resource) public resources;\n\n    enum Permission {\n        STUDENT,\n        SCIENTIFIC_ASSISTANT,\n        PROFESSOR\n    }\n\n    //constructor\n    constructor() public {\n        university = msg.sender;\n    }\n\n    function addAuthority() public {}\n\n    function createBooking(\n        uint256 fromTimeStampInput,\n        uint256 toTimeStampInput,\n        address renterAddress,\n        Permission renterPermission\n    ) public {\n        require(\n            block.timestamp < (offsetBookingTime + uint256(fromTimeStampInput)),\n            \"The rental must be in future\"\n        );\n\n        require(\n            (renterPermission >= resourcePermission),\n            \"The User is allowed to book the room\"\n        );\n\n        require(\n            (fromTimeStampInput + toTimeStampInput <= maxRentTime),\n            \"The booking time is above the maxRentTime\"\n        );\n\n        emit BookingCreated(\n            fromTimeStampInput,\n            toTimeStampInput,\n            renterAddress,\n            renterPermission\n        );\n    }\n\n    // Functionen\n\n    function getUniversity() public view returns (address) {\n        return university;\n    }\n\n    function getResourceRequiredPermission() public view returns (Permission) {}\n\n    // Modifier\n\n    modifier isUniversity() {\n        require(msg.sender == university, \"Caller is not owner\");\n        _;\n    }\n\n    modifier isAuthority() {\n        require(msg.sender == university, \"Caller is not owner\");\n        _;\n    }\n    // Events\n\n    event BookingCreated(\n        uint256 fromTimeStamp,\n        uint256 toTimeStamp,\n        address renterAddress,\n        Permission renterPermission\n    );\n}\n",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/ResourceRentalUniversity.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ResourceRentalUniversity.sol",
+    "exportedSymbols": {
+      "ResourceRentalUniversity": [
+        872
+      ]
+    },
+    "id": 873,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 717,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 872,
+        "linearizedBaseContracts": [
+          872
+        ],
+        "name": "ResourceRentalUniversity",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 719,
+            "name": "maxRooms",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "90:16:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 718,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "90:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 721,
+            "name": "maxAmountSmartContracts",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "112:31:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 720,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "112:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 723,
+            "name": "maxRentTime",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "149:19:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 722,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "149:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 725,
+            "name": "offsetBookingTime",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "174:25:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 724,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "174:7:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 727,
+            "name": "resourcePermission",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "205:29:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Permission_$760",
+              "typeString": "enum ResourceRentalUniversity.Permission"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 726,
+              "name": "Permission",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 760,
+              "src": "205:10:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Permission_$760",
+                "typeString": "enum ResourceRentalUniversity.Permission"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 729,
+            "name": "university",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "295:25:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 728,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "295:7:10",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 733,
+            "name": "authorities",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "326:46:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 732,
+              "keyType": {
+                "id": 730,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "334:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "326:27:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 731,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "345:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ResourceRentalUniversity.Resource",
+            "id": 752,
+            "members": [
+              {
+                "constant": false,
+                "id": 735,
+                "name": "resourceId",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "464:18:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 734,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "464:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 737,
+                "name": "resourceName",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "492:19:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 736,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "492:6:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 739,
+                "name": "loanable",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "521:13:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 738,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "521:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 741,
+                "name": "loanInterval",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "544:20:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 740,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "544:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 743,
+                "name": "resourceElectricityCostPerHour",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "574:38:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 742,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "574:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 745,
+                "name": "resourceCosts",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "622:21:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 744,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "622:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 747,
+                "name": "computingPower",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "653:22:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 746,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "653:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 749,
+                "name": "buyOut",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "685:11:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 748,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "685:4:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 751,
+                "name": "appraisedValue",
+                "nodeType": "VariableDeclaration",
+                "scope": 752,
+                "src": "706:22:10",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 750,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "706:7:10",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Resource",
+            "nodeType": "StructDefinition",
+            "scope": 872,
+            "src": "438:297:10",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 756,
+            "name": "resources",
+            "nodeType": "VariableDeclaration",
+            "scope": 872,
+            "src": "741:45:10",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Resource_$752_storage_$",
+              "typeString": "mapping(uint256 => struct ResourceRentalUniversity.Resource)"
+            },
+            "typeName": {
+              "id": 755,
+              "keyType": {
+                "id": 753,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "749:7:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "741:28:10",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Resource_$752_storage_$",
+                "typeString": "mapping(uint256 => struct ResourceRentalUniversity.Resource)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 754,
+                "name": "Resource",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 752,
+                "src": "760:8:10",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Resource_$752_storage_ptr",
+                  "typeString": "struct ResourceRentalUniversity.Resource"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ResourceRentalUniversity.Permission",
+            "id": 760,
+            "members": [
+              {
+                "id": 757,
+                "name": "STUDENT",
+                "nodeType": "EnumValue",
+                "src": "819:7:10"
+              },
+              {
+                "id": 758,
+                "name": "SCIENTIFIC_ASSISTANT",
+                "nodeType": "EnumValue",
+                "src": "836:20:10"
+              },
+              {
+                "id": 759,
+                "name": "PROFESSOR",
+                "nodeType": "EnumValue",
+                "src": "866:9:10"
+              }
+            ],
+            "name": "Permission",
+            "nodeType": "EnumDefinition",
+            "src": "793:88:10"
+          },
+          {
+            "body": {
+              "id": 768,
+              "nodeType": "Block",
+              "src": "926:40:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 766,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 763,
+                      "name": "university",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 729,
+                      "src": "936:10:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 764,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1048,
+                        "src": "949:3:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 765,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "949:10:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "936:23:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 767,
+                  "nodeType": "ExpressionStatement",
+                  "src": "936:23:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 769,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 761,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "916:2:10"
+            },
+            "returnParameters": {
+              "id": 762,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "926:0:10"
+            },
+            "scope": 872,
+            "src": "905:61:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 772,
+              "nodeType": "Block",
+              "src": "1003:2:10",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 773,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addAuthority",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 770,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "993:2:10"
+            },
+            "returnParameters": {
+              "id": 771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1003:0:10"
+            },
+            "scope": 872,
+            "src": "972:33:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 822,
+              "nodeType": "Block",
+              "src": "1185:605:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 793,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 785,
+                            "name": "block",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1038,
+                            "src": "1216:5:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_block",
+                              "typeString": "block"
+                            }
+                          },
+                          "id": 786,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "timestamp",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "1216:15:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "components": [
+                            {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 791,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "argumentTypes": null,
+                                "id": 787,
+                                "name": "offsetBookingTime",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 725,
+                                "src": "1235:17:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "+",
+                              "rightExpression": {
+                                "argumentTypes": null,
+                                "arguments": [
+                                  {
+                                    "argumentTypes": null,
+                                    "id": 789,
+                                    "name": "fromTimeStampInput",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 775,
+                                    "src": "1263:18:10",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "id": 788,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "nodeType": "ElementaryTypeNameExpression",
+                                  "src": "1255:7:10",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_type$_t_uint256_$",
+                                    "typeString": "type(uint256)"
+                                  },
+                                  "typeName": "uint256"
+                                },
+                                "id": 790,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "typeConversion",
+                                "lValueRequested": false,
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "1255:27:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "1235:47:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "id": 792,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "TupleExpression",
+                          "src": "1234:49:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1216:67:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "5468652072656e74616c206d75737420626520696e20667574757265",
+                        "id": 794,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1297:30:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_f21e3dae89bc51ce8d1f09942565172c0e6829bff6efc477514783878712db14",
+                          "typeString": "literal_string \"The rental must be in future\""
+                        },
+                        "value": "The rental must be in future"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_f21e3dae89bc51ce8d1f09942565172c0e6829bff6efc477514783878712db14",
+                          "typeString": "literal_string \"The rental must be in future\""
+                        }
+                      ],
+                      "id": 784,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "1195:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 795,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1195:142:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 796,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1195:142:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_enum$_Permission_$760",
+                              "typeString": "enum ResourceRentalUniversity.Permission"
+                            },
+                            "id": 800,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 798,
+                              "name": "renterPermission",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 781,
+                              "src": "1370:16:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_Permission_$760",
+                                "typeString": "enum ResourceRentalUniversity.Permission"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": ">=",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 799,
+                              "name": "resourcePermission",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 727,
+                              "src": "1390:18:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_enum$_Permission_$760",
+                                "typeString": "enum ResourceRentalUniversity.Permission"
+                              }
+                            },
+                            "src": "1370:38:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          }
+                        ],
+                        "id": 801,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "1369:40:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6d",
+                        "id": 802,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1423:38:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_168522ba6d3ebaaa51bd1b4d4f190b5efd6a956ea43b111927d974efc06a6914",
+                          "typeString": "literal_string \"The User is allowed to book the room\""
+                        },
+                        "value": "The User is allowed to book the room"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_168522ba6d3ebaaa51bd1b4d4f190b5efd6a956ea43b111927d974efc06a6914",
+                          "typeString": "literal_string \"The User is allowed to book the room\""
+                        }
+                      ],
+                      "id": 797,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "1348:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 803,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1348:123:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 804,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1348:123:10"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 810,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 808,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "argumentTypes": null,
+                                "id": 806,
+                                "name": "fromTimeStampInput",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 775,
+                                "src": "1504:18:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "+",
+                              "rightExpression": {
+                                "argumentTypes": null,
+                                "id": 807,
+                                "name": "toTimeStampInput",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 777,
+                                "src": "1525:16:10",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "src": "1504:37:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "<=",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 809,
+                              "name": "maxRentTime",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 723,
+                              "src": "1545:11:10",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "src": "1504:52:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            }
+                          }
+                        ],
+                        "id": 811,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "1503:54:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "54686520626f6f6b696e672074696d652069732061626f766520746865206d617852656e7454696d65",
+                        "id": 812,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1571:43:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4a8f8f1c18c07e41d22bc93ae6440ac4abd9041567ac253748d61a19e43dd150",
+                          "typeString": "literal_string \"The booking time is above the maxRentTime\""
+                        },
+                        "value": "The booking time is above the maxRentTime"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_4a8f8f1c18c07e41d22bc93ae6440ac4abd9041567ac253748d61a19e43dd150",
+                          "typeString": "literal_string \"The booking time is above the maxRentTime\""
+                        }
+                      ],
+                      "id": 805,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "1482:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 813,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1482:142:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 814,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1482:142:10"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 816,
+                        "name": "fromTimeStampInput",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 775,
+                        "src": "1668:18:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 817,
+                        "name": "toTimeStampInput",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 777,
+                        "src": "1700:16:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 818,
+                        "name": "renterAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 779,
+                        "src": "1730:13:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 819,
+                        "name": "renterPermission",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 781,
+                        "src": "1757:16:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_enum$_Permission_$760",
+                          "typeString": "enum ResourceRentalUniversity.Permission"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_enum$_Permission_$760",
+                          "typeString": "enum ResourceRentalUniversity.Permission"
+                        }
+                      ],
+                      "id": 815,
+                      "name": "BookingCreated",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 871,
+                      "src": "1640:14:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_address_$_t_enum$_Permission_$760_$returns$__$",
+                        "typeString": "function (uint256,uint256,address,enum ResourceRentalUniversity.Permission)"
+                      }
+                    },
+                    "id": 820,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1640:143:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 821,
+                  "nodeType": "EmitStatement",
+                  "src": "1635:148:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 823,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createBooking",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 782,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 775,
+                  "name": "fromTimeStampInput",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 823,
+                  "src": "1043:26:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 774,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 777,
+                  "name": "toTimeStampInput",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 823,
+                  "src": "1079:24:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 776,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1079:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 779,
+                  "name": "renterAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 823,
+                  "src": "1113:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 778,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1113:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 781,
+                  "name": "renterPermission",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 823,
+                  "src": "1144:27:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Permission_$760",
+                    "typeString": "enum ResourceRentalUniversity.Permission"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 780,
+                    "name": "Permission",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 760,
+                    "src": "1144:10:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Permission_$760",
+                      "typeString": "enum ResourceRentalUniversity.Permission"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1033:144:10"
+            },
+            "returnParameters": {
+              "id": 783,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1185:0:10"
+            },
+            "scope": 872,
+            "src": "1011:779:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 830,
+              "nodeType": "Block",
+              "src": "1870:34:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 828,
+                    "name": "university",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 729,
+                    "src": "1887:10:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 827,
+                  "id": 829,
+                  "nodeType": "Return",
+                  "src": "1880:17:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 831,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUniversity",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 824,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1837:2:10"
+            },
+            "returnParameters": {
+              "id": 827,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 826,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 831,
+                  "src": "1861:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 825,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1861:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1860:9:10"
+            },
+            "scope": 872,
+            "src": "1815:89:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 836,
+              "nodeType": "Block",
+              "src": "1984:2:10",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 837,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getResourceRequiredPermission",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 832,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1948:2:10"
+            },
+            "returnParameters": {
+              "id": 835,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 834,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 837,
+                  "src": "1972:10:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Permission_$760",
+                    "typeString": "enum ResourceRentalUniversity.Permission"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 833,
+                    "name": "Permission",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 760,
+                    "src": "1972:10:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Permission_$760",
+                      "typeString": "enum ResourceRentalUniversity.Permission"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1971:12:10"
+            },
+            "scope": 872,
+            "src": "1910:76:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 848,
+              "nodeType": "Block",
+              "src": "2033:84:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 843,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 840,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1048,
+                            "src": "2051:3:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 841,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2051:10:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 842,
+                          "name": "university",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 729,
+                          "src": "2065:10:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2051:24:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "43616c6c6572206973206e6f74206f776e6572",
+                        "id": 844,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2077:21:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                          "typeString": "literal_string \"Caller is not owner\""
+                        },
+                        "value": "Caller is not owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                          "typeString": "literal_string \"Caller is not owner\""
+                        }
+                      ],
+                      "id": 839,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "2043:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 845,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2043:56:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 846,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2043:56:10"
+                },
+                {
+                  "id": 847,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2109:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 849,
+            "name": "isUniversity",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 838,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2030:2:10"
+            },
+            "src": "2009:108:10",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 860,
+              "nodeType": "Block",
+              "src": "2146:84:10",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 855,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 852,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1048,
+                            "src": "2164:3:10",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 853,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "2164:10:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 854,
+                          "name": "university",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 729,
+                          "src": "2178:10:10",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "2164:24:10",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "43616c6c6572206973206e6f74206f776e6572",
+                        "id": 856,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2190:21:10",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                          "typeString": "literal_string \"Caller is not owner\""
+                        },
+                        "value": "Caller is not owner"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                          "typeString": "literal_string \"Caller is not owner\""
+                        }
+                      ],
+                      "id": 851,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        1051,
+                        1052
+                      ],
+                      "referencedDeclaration": 1052,
+                      "src": "2156:7:10",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 857,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2156:56:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 858,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2156:56:10"
+                },
+                {
+                  "id": 859,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "2222:1:10"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 861,
+            "name": "isAuthority",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 850,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2143:2:10"
+            },
+            "src": "2123:107:10",
+            "visibility": "internal"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 871,
+            "name": "BookingCreated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 870,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 863,
+                  "indexed": false,
+                  "name": "fromTimeStamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "2280:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 862,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2280:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 865,
+                  "indexed": false,
+                  "name": "toTimeStamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "2311:19:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 864,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2311:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 867,
+                  "indexed": false,
+                  "name": "renterAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "2340:21:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 866,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2340:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 869,
+                  "indexed": false,
+                  "name": "renterPermission",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 871,
+                  "src": "2371:27:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Permission_$760",
+                    "typeString": "enum ResourceRentalUniversity.Permission"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 868,
+                    "name": "Permission",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 760,
+                    "src": "2371:10:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Permission_$760",
+                      "typeString": "enum ResourceRentalUniversity.Permission"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2270:134:10"
+            },
+            "src": "2250:155:10"
+          }
+        ],
+        "scope": 873,
+        "src": "26:2381:10"
+      }
+    ],
+    "src": "0:2408:10"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/ResourceRentalUniversity.sol",
+      "exportedSymbols": {
+        "ResourceRentalUniversity": [
+          872
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 717,
+        "name": "PragmaDirective",
+        "src": "0:24:10"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            872
+          ],
+          "name": "ResourceRentalUniversity",
+          "scope": 873
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "maxRooms",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 718,
+                "name": "ElementaryTypeName",
+                "src": "90:7:10"
+              }
+            ],
+            "id": 719,
+            "name": "VariableDeclaration",
+            "src": "90:16:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "maxAmountSmartContracts",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 720,
+                "name": "ElementaryTypeName",
+                "src": "112:7:10"
+              }
+            ],
+            "id": 721,
+            "name": "VariableDeclaration",
+            "src": "112:31:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "maxRentTime",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 722,
+                "name": "ElementaryTypeName",
+                "src": "149:7:10"
+              }
+            ],
+            "id": 723,
+            "name": "VariableDeclaration",
+            "src": "149:19:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "offsetBookingTime",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 724,
+                "name": "ElementaryTypeName",
+                "src": "174:7:10"
+              }
+            ],
+            "id": 725,
+            "name": "VariableDeclaration",
+            "src": "174:25:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "resourcePermission",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "enum ResourceRentalUniversity.Permission",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Permission",
+                  "referencedDeclaration": 760,
+                  "type": "enum ResourceRentalUniversity.Permission"
+                },
+                "id": 726,
+                "name": "UserDefinedTypeName",
+                "src": "205:10:10"
+              }
+            ],
+            "id": 727,
+            "name": "VariableDeclaration",
+            "src": "205:29:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "university",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 728,
+                "name": "ElementaryTypeName",
+                "src": "295:7:10"
+              }
+            ],
+            "id": 729,
+            "name": "VariableDeclaration",
+            "src": "295:25:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "authorities",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 730,
+                    "name": "ElementaryTypeName",
+                    "src": "334:7:10"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 731,
+                    "name": "ElementaryTypeName",
+                    "src": "345:7:10"
+                  }
+                ],
+                "id": 732,
+                "name": "Mapping",
+                "src": "326:27:10"
+              }
+            ],
+            "id": 733,
+            "name": "VariableDeclaration",
+            "src": "326:46:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ResourceRentalUniversity.Resource",
+              "name": "Resource",
+              "scope": 872,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "resourceId",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 734,
+                    "name": "ElementaryTypeName",
+                    "src": "464:7:10"
+                  }
+                ],
+                "id": 735,
+                "name": "VariableDeclaration",
+                "src": "464:18:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "resourceName",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 736,
+                    "name": "ElementaryTypeName",
+                    "src": "492:6:10"
+                  }
+                ],
+                "id": 737,
+                "name": "VariableDeclaration",
+                "src": "492:19:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "loanable",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 738,
+                    "name": "ElementaryTypeName",
+                    "src": "521:4:10"
+                  }
+                ],
+                "id": 739,
+                "name": "VariableDeclaration",
+                "src": "521:13:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "loanInterval",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 740,
+                    "name": "ElementaryTypeName",
+                    "src": "544:7:10"
+                  }
+                ],
+                "id": 741,
+                "name": "VariableDeclaration",
+                "src": "544:20:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "resourceElectricityCostPerHour",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 742,
+                    "name": "ElementaryTypeName",
+                    "src": "574:7:10"
+                  }
+                ],
+                "id": 743,
+                "name": "VariableDeclaration",
+                "src": "574:38:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "resourceCosts",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 744,
+                    "name": "ElementaryTypeName",
+                    "src": "622:7:10"
+                  }
+                ],
+                "id": 745,
+                "name": "VariableDeclaration",
+                "src": "622:21:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "computingPower",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 746,
+                    "name": "ElementaryTypeName",
+                    "src": "653:7:10"
+                  }
+                ],
+                "id": 747,
+                "name": "VariableDeclaration",
+                "src": "653:22:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "buyOut",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 748,
+                    "name": "ElementaryTypeName",
+                    "src": "685:4:10"
+                  }
+                ],
+                "id": 749,
+                "name": "VariableDeclaration",
+                "src": "685:11:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "appraisedValue",
+                  "scope": 752,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 750,
+                    "name": "ElementaryTypeName",
+                    "src": "706:7:10"
+                  }
+                ],
+                "id": 751,
+                "name": "VariableDeclaration",
+                "src": "706:22:10"
+              }
+            ],
+            "id": 752,
+            "name": "StructDefinition",
+            "src": "438:297:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "resources",
+              "scope": 872,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct ResourceRentalUniversity.Resource)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct ResourceRentalUniversity.Resource)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 753,
+                    "name": "ElementaryTypeName",
+                    "src": "749:7:10"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Resource",
+                      "referencedDeclaration": 752,
+                      "type": "struct ResourceRentalUniversity.Resource"
+                    },
+                    "id": 754,
+                    "name": "UserDefinedTypeName",
+                    "src": "760:8:10"
+                  }
+                ],
+                "id": 755,
+                "name": "Mapping",
+                "src": "741:28:10"
+              }
+            ],
+            "id": 756,
+            "name": "VariableDeclaration",
+            "src": "741:45:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "ResourceRentalUniversity.Permission",
+              "name": "Permission"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "STUDENT"
+                },
+                "id": 757,
+                "name": "EnumValue",
+                "src": "819:7:10"
+              },
+              {
+                "attributes": {
+                  "name": "SCIENTIFIC_ASSISTANT"
+                },
+                "id": 758,
+                "name": "EnumValue",
+                "src": "836:20:10"
+              },
+              {
+                "attributes": {
+                  "name": "PROFESSOR"
+                },
+                "id": 759,
+                "name": "EnumValue",
+                "src": "866:9:10"
+              }
+            ],
+            "id": 760,
+            "name": "EnumDefinition",
+            "src": "793:88:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 872,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 761,
+                "name": "ParameterList",
+                "src": "916:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 762,
+                "name": "ParameterList",
+                "src": "926:0:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 729,
+                              "type": "address",
+                              "value": "university"
+                            },
+                            "id": 763,
+                            "name": "Identifier",
+                            "src": "936:10:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1048,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 764,
+                                "name": "Identifier",
+                                "src": "949:3:10"
+                              }
+                            ],
+                            "id": 765,
+                            "name": "MemberAccess",
+                            "src": "949:10:10"
+                          }
+                        ],
+                        "id": 766,
+                        "name": "Assignment",
+                        "src": "936:23:10"
+                      }
+                    ],
+                    "id": 767,
+                    "name": "ExpressionStatement",
+                    "src": "936:23:10"
+                  }
+                ],
+                "id": 768,
+                "name": "Block",
+                "src": "926:40:10"
+              }
+            ],
+            "id": 769,
+            "name": "FunctionDefinition",
+            "src": "905:61:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addAuthority",
+              "scope": 872,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 770,
+                "name": "ParameterList",
+                "src": "993:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 771,
+                "name": "ParameterList",
+                "src": "1003:0:10"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 772,
+                "name": "Block",
+                "src": "1003:2:10"
+              }
+            ],
+            "id": 773,
+            "name": "FunctionDefinition",
+            "src": "972:33:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createBooking",
+              "scope": 872,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "fromTimeStampInput",
+                      "scope": 823,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 774,
+                        "name": "ElementaryTypeName",
+                        "src": "1043:7:10"
+                      }
+                    ],
+                    "id": 775,
+                    "name": "VariableDeclaration",
+                    "src": "1043:26:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "toTimeStampInput",
+                      "scope": 823,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 776,
+                        "name": "ElementaryTypeName",
+                        "src": "1079:7:10"
+                      }
+                    ],
+                    "id": 777,
+                    "name": "VariableDeclaration",
+                    "src": "1079:24:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "renterAddress",
+                      "scope": 823,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 778,
+                        "name": "ElementaryTypeName",
+                        "src": "1113:7:10"
+                      }
+                    ],
+                    "id": 779,
+                    "name": "VariableDeclaration",
+                    "src": "1113:21:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "renterPermission",
+                      "scope": 823,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum ResourceRentalUniversity.Permission",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Permission",
+                          "referencedDeclaration": 760,
+                          "type": "enum ResourceRentalUniversity.Permission"
+                        },
+                        "id": 780,
+                        "name": "UserDefinedTypeName",
+                        "src": "1144:10:10"
+                      }
+                    ],
+                    "id": 781,
+                    "name": "VariableDeclaration",
+                    "src": "1144:27:10"
+                  }
+                ],
+                "id": 782,
+                "name": "ParameterList",
+                "src": "1033:144:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 783,
+                "name": "ParameterList",
+                "src": "1185:0:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_f21e3dae89bc51ce8d1f09942565172c0e6829bff6efc477514783878712db14",
+                                  "typeString": "literal_string \"The rental must be in future\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                1051,
+                                1052
+                              ],
+                              "referencedDeclaration": 1052,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 784,
+                            "name": "Identifier",
+                            "src": "1195:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "<",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "timestamp",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1038,
+                                      "type": "block",
+                                      "value": "block"
+                                    },
+                                    "id": 785,
+                                    "name": "Identifier",
+                                    "src": "1216:5:10"
+                                  }
+                                ],
+                                "id": 786,
+                                "name": "MemberAccess",
+                                "src": "1216:15:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "+",
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 725,
+                                          "type": "uint256",
+                                          "value": "offsetBookingTime"
+                                        },
+                                        "id": 787,
+                                        "name": "Identifier",
+                                        "src": "1235:17:10"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "isStructConstructorCall": false,
+                                          "lValueRequested": false,
+                                          "names": [
+                                            null
+                                          ],
+                                          "type": "uint256",
+                                          "type_conversion": true
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": [
+                                                {
+                                                  "typeIdentifier": "t_uint256",
+                                                  "typeString": "uint256"
+                                                }
+                                              ],
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": true,
+                                              "lValueRequested": false,
+                                              "type": "type(uint256)",
+                                              "value": "uint256"
+                                            },
+                                            "id": 788,
+                                            "name": "ElementaryTypeNameExpression",
+                                            "src": "1255:7:10"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 775,
+                                              "type": "uint256",
+                                              "value": "fromTimeStampInput"
+                                            },
+                                            "id": 789,
+                                            "name": "Identifier",
+                                            "src": "1263:18:10"
+                                          }
+                                        ],
+                                        "id": 790,
+                                        "name": "FunctionCall",
+                                        "src": "1255:27:10"
+                                      }
+                                    ],
+                                    "id": 791,
+                                    "name": "BinaryOperation",
+                                    "src": "1235:47:10"
+                                  }
+                                ],
+                                "id": 792,
+                                "name": "TupleExpression",
+                                "src": "1234:49:10"
+                              }
+                            ],
+                            "id": 793,
+                            "name": "BinaryOperation",
+                            "src": "1216:67:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "5468652072656e74616c206d75737420626520696e20667574757265",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"The rental must be in future\"",
+                              "value": "The rental must be in future"
+                            },
+                            "id": 794,
+                            "name": "Literal",
+                            "src": "1297:30:10"
+                          }
+                        ],
+                        "id": 795,
+                        "name": "FunctionCall",
+                        "src": "1195:142:10"
+                      }
+                    ],
+                    "id": 796,
+                    "name": "ExpressionStatement",
+                    "src": "1195:142:10"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_168522ba6d3ebaaa51bd1b4d4f190b5efd6a956ea43b111927d974efc06a6914",
+                                  "typeString": "literal_string \"The User is allowed to book the room\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                1051,
+                                1052
+                              ],
+                              "referencedDeclaration": 1052,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 797,
+                            "name": "Identifier",
+                            "src": "1348:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_enum$_Permission_$760",
+                                    "typeString": "enum ResourceRentalUniversity.Permission"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": ">=",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 781,
+                                      "type": "enum ResourceRentalUniversity.Permission",
+                                      "value": "renterPermission"
+                                    },
+                                    "id": 798,
+                                    "name": "Identifier",
+                                    "src": "1370:16:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 727,
+                                      "type": "enum ResourceRentalUniversity.Permission",
+                                      "value": "resourcePermission"
+                                    },
+                                    "id": 799,
+                                    "name": "Identifier",
+                                    "src": "1390:18:10"
+                                  }
+                                ],
+                                "id": 800,
+                                "name": "BinaryOperation",
+                                "src": "1370:38:10"
+                              }
+                            ],
+                            "id": 801,
+                            "name": "TupleExpression",
+                            "src": "1369:40:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "546865205573657220697320616c6c6f77656420746f20626f6f6b2074686520726f6f6d",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"The User is allowed to book the room\"",
+                              "value": "The User is allowed to book the room"
+                            },
+                            "id": 802,
+                            "name": "Literal",
+                            "src": "1423:38:10"
+                          }
+                        ],
+                        "id": 803,
+                        "name": "FunctionCall",
+                        "src": "1348:123:10"
+                      }
+                    ],
+                    "id": 804,
+                    "name": "ExpressionStatement",
+                    "src": "1348:123:10"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_4a8f8f1c18c07e41d22bc93ae6440ac4abd9041567ac253748d61a19e43dd150",
+                                  "typeString": "literal_string \"The booking time is above the maxRentTime\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                1051,
+                                1052
+                              ],
+                              "referencedDeclaration": 1052,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 805,
+                            "name": "Identifier",
+                            "src": "1482:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "<=",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      },
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "operator": "+",
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 775,
+                                          "type": "uint256",
+                                          "value": "fromTimeStampInput"
+                                        },
+                                        "id": 806,
+                                        "name": "Identifier",
+                                        "src": "1504:18:10"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 777,
+                                          "type": "uint256",
+                                          "value": "toTimeStampInput"
+                                        },
+                                        "id": 807,
+                                        "name": "Identifier",
+                                        "src": "1525:16:10"
+                                      }
+                                    ],
+                                    "id": 808,
+                                    "name": "BinaryOperation",
+                                    "src": "1504:37:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 723,
+                                      "type": "uint256",
+                                      "value": "maxRentTime"
+                                    },
+                                    "id": 809,
+                                    "name": "Identifier",
+                                    "src": "1545:11:10"
+                                  }
+                                ],
+                                "id": 810,
+                                "name": "BinaryOperation",
+                                "src": "1504:52:10"
+                              }
+                            ],
+                            "id": 811,
+                            "name": "TupleExpression",
+                            "src": "1503:54:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "54686520626f6f6b696e672074696d652069732061626f766520746865206d617852656e7454696d65",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"The booking time is above the maxRentTime\"",
+                              "value": "The booking time is above the maxRentTime"
+                            },
+                            "id": 812,
+                            "name": "Literal",
+                            "src": "1571:43:10"
+                          }
+                        ],
+                        "id": 813,
+                        "name": "FunctionCall",
+                        "src": "1482:142:10"
+                      }
+                    ],
+                    "id": 814,
+                    "name": "ExpressionStatement",
+                    "src": "1482:142:10"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_enum$_Permission_$760",
+                                  "typeString": "enum ResourceRentalUniversity.Permission"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 871,
+                              "type": "function (uint256,uint256,address,enum ResourceRentalUniversity.Permission)",
+                              "value": "BookingCreated"
+                            },
+                            "id": 815,
+                            "name": "Identifier",
+                            "src": "1640:14:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 775,
+                              "type": "uint256",
+                              "value": "fromTimeStampInput"
+                            },
+                            "id": 816,
+                            "name": "Identifier",
+                            "src": "1668:18:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 777,
+                              "type": "uint256",
+                              "value": "toTimeStampInput"
+                            },
+                            "id": 817,
+                            "name": "Identifier",
+                            "src": "1700:16:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 779,
+                              "type": "address",
+                              "value": "renterAddress"
+                            },
+                            "id": 818,
+                            "name": "Identifier",
+                            "src": "1730:13:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 781,
+                              "type": "enum ResourceRentalUniversity.Permission",
+                              "value": "renterPermission"
+                            },
+                            "id": 819,
+                            "name": "Identifier",
+                            "src": "1757:16:10"
+                          }
+                        ],
+                        "id": 820,
+                        "name": "FunctionCall",
+                        "src": "1640:143:10"
+                      }
+                    ],
+                    "id": 821,
+                    "name": "EmitStatement",
+                    "src": "1635:148:10"
+                  }
+                ],
+                "id": 822,
+                "name": "Block",
+                "src": "1185:605:10"
+              }
+            ],
+            "id": 823,
+            "name": "FunctionDefinition",
+            "src": "1011:779:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getUniversity",
+              "scope": 872,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 824,
+                "name": "ParameterList",
+                "src": "1837:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 831,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 825,
+                        "name": "ElementaryTypeName",
+                        "src": "1861:7:10"
+                      }
+                    ],
+                    "id": 826,
+                    "name": "VariableDeclaration",
+                    "src": "1861:7:10"
+                  }
+                ],
+                "id": 827,
+                "name": "ParameterList",
+                "src": "1860:9:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 827
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 729,
+                          "type": "address",
+                          "value": "university"
+                        },
+                        "id": 828,
+                        "name": "Identifier",
+                        "src": "1887:10:10"
+                      }
+                    ],
+                    "id": 829,
+                    "name": "Return",
+                    "src": "1880:17:10"
+                  }
+                ],
+                "id": 830,
+                "name": "Block",
+                "src": "1870:34:10"
+              }
+            ],
+            "id": 831,
+            "name": "FunctionDefinition",
+            "src": "1815:89:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getResourceRequiredPermission",
+              "scope": 872,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 832,
+                "name": "ParameterList",
+                "src": "1948:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 837,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum ResourceRentalUniversity.Permission",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Permission",
+                          "referencedDeclaration": 760,
+                          "type": "enum ResourceRentalUniversity.Permission"
+                        },
+                        "id": 833,
+                        "name": "UserDefinedTypeName",
+                        "src": "1972:10:10"
+                      }
+                    ],
+                    "id": 834,
+                    "name": "VariableDeclaration",
+                    "src": "1972:10:10"
+                  }
+                ],
+                "id": 835,
+                "name": "ParameterList",
+                "src": "1971:12:10"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 836,
+                "name": "Block",
+                "src": "1984:2:10"
+              }
+            ],
+            "id": 837,
+            "name": "FunctionDefinition",
+            "src": "1910:76:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "isUniversity",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 838,
+                "name": "ParameterList",
+                "src": "2030:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                                  "typeString": "literal_string \"Caller is not owner\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                1051,
+                                1052
+                              ],
+                              "referencedDeclaration": 1052,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 839,
+                            "name": "Identifier",
+                            "src": "2043:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1048,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 840,
+                                    "name": "Identifier",
+                                    "src": "2051:3:10"
+                                  }
+                                ],
+                                "id": 841,
+                                "name": "MemberAccess",
+                                "src": "2051:10:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 729,
+                                  "type": "address",
+                                  "value": "university"
+                                },
+                                "id": 842,
+                                "name": "Identifier",
+                                "src": "2065:10:10"
+                              }
+                            ],
+                            "id": 843,
+                            "name": "BinaryOperation",
+                            "src": "2051:24:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "43616c6c6572206973206e6f74206f776e6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Caller is not owner\"",
+                              "value": "Caller is not owner"
+                            },
+                            "id": 844,
+                            "name": "Literal",
+                            "src": "2077:21:10"
+                          }
+                        ],
+                        "id": 845,
+                        "name": "FunctionCall",
+                        "src": "2043:56:10"
+                      }
+                    ],
+                    "id": 846,
+                    "name": "ExpressionStatement",
+                    "src": "2043:56:10"
+                  },
+                  {
+                    "id": 847,
+                    "name": "PlaceholderStatement",
+                    "src": "2109:1:10"
+                  }
+                ],
+                "id": 848,
+                "name": "Block",
+                "src": "2033:84:10"
+              }
+            ],
+            "id": 849,
+            "name": "ModifierDefinition",
+            "src": "2009:108:10"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "isAuthority",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 850,
+                "name": "ParameterList",
+                "src": "2143:2:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_2d10247a65709fdb3c0696b0ed760a0c246e12f8c496efb56291dd2fe3b0275d",
+                                  "typeString": "literal_string \"Caller is not owner\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                1051,
+                                1052
+                              ],
+                              "referencedDeclaration": 1052,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 851,
+                            "name": "Identifier",
+                            "src": "2156:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1048,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 852,
+                                    "name": "Identifier",
+                                    "src": "2164:3:10"
+                                  }
+                                ],
+                                "id": 853,
+                                "name": "MemberAccess",
+                                "src": "2164:10:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 729,
+                                  "type": "address",
+                                  "value": "university"
+                                },
+                                "id": 854,
+                                "name": "Identifier",
+                                "src": "2178:10:10"
+                              }
+                            ],
+                            "id": 855,
+                            "name": "BinaryOperation",
+                            "src": "2164:24:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "43616c6c6572206973206e6f74206f776e6572",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Caller is not owner\"",
+                              "value": "Caller is not owner"
+                            },
+                            "id": 856,
+                            "name": "Literal",
+                            "src": "2190:21:10"
+                          }
+                        ],
+                        "id": 857,
+                        "name": "FunctionCall",
+                        "src": "2156:56:10"
+                      }
+                    ],
+                    "id": 858,
+                    "name": "ExpressionStatement",
+                    "src": "2156:56:10"
+                  },
+                  {
+                    "id": 859,
+                    "name": "PlaceholderStatement",
+                    "src": "2222:1:10"
+                  }
+                ],
+                "id": 860,
+                "name": "Block",
+                "src": "2146:84:10"
+              }
+            ],
+            "id": 861,
+            "name": "ModifierDefinition",
+            "src": "2123:107:10"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "BookingCreated"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "fromTimeStamp",
+                      "scope": 871,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 862,
+                        "name": "ElementaryTypeName",
+                        "src": "2280:7:10"
+                      }
+                    ],
+                    "id": 863,
+                    "name": "VariableDeclaration",
+                    "src": "2280:21:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "toTimeStamp",
+                      "scope": 871,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 864,
+                        "name": "ElementaryTypeName",
+                        "src": "2311:7:10"
+                      }
+                    ],
+                    "id": 865,
+                    "name": "VariableDeclaration",
+                    "src": "2311:19:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "renterAddress",
+                      "scope": 871,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 866,
+                        "name": "ElementaryTypeName",
+                        "src": "2340:7:10"
+                      }
+                    ],
+                    "id": 867,
+                    "name": "VariableDeclaration",
+                    "src": "2340:21:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "renterPermission",
+                      "scope": 871,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "enum ResourceRentalUniversity.Permission",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "Permission",
+                          "referencedDeclaration": 760,
+                          "type": "enum ResourceRentalUniversity.Permission"
+                        },
+                        "id": 868,
+                        "name": "UserDefinedTypeName",
+                        "src": "2371:10:10"
+                      }
+                    ],
+                    "id": 869,
+                    "name": "VariableDeclaration",
+                    "src": "2371:27:10"
+                  }
+                ],
+                "id": 870,
+                "name": "ParameterList",
+                "src": "2270:134:10"
+              }
+            ],
+            "id": 871,
+            "name": "EventDefinition",
+            "src": "2250:155:10"
+          }
+        ],
+        "id": 872,
+        "name": "ContractDefinition",
+        "src": "26:2381:10"
+      }
+    ],
+    "id": 873,
+    "name": "SourceUnit",
+    "src": "0:2408:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-06-01T16:03:30.540Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

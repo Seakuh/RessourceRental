@@ -73,6 +73,10 @@ export class BookingsService {
     return true;
   }
 
+  // connectToEthers(){
+  //
+  // }
+
   isValidTimestamp(_timestamp: number): boolean {
     const valid = new Date(_timestamp).getTime() > 0;
 

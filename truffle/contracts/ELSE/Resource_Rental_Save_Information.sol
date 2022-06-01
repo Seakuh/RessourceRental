@@ -1,9 +1,6 @@
 pragma solidity ^0.5.16;
 
-contract ResourceRentalGetInformation {}
-pragma solidity ^0.5.16;
-
-contract ResourceRental {
+contract ResourceRentalSaveInformationBase {
     address owner;
     address currentRenter;
     uint256 fromTimestamp;

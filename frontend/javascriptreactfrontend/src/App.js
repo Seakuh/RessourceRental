@@ -3,16 +3,13 @@ import Web3 from "web3";
 import "./App.css";
 import { ContractABI } from "./contracts/ContractABI";
 
-const web3: any = new Web3(
-  new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545")
-);
+const web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
 web3.eth.defaultAccount = web3.eth.accounts[0];
 
 const RemixContract = new web3.eth.Contract(
   ContractABI,
   "0x677BB4A98566ab3e12E7178A0C06Ae3A3988A2A7"
 );
-
 function App() {
   const [message, setMessage] = useState("");
 

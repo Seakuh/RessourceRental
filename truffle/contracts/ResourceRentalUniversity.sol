@@ -10,8 +10,9 @@ contract ResourceRentalUniversity {
 
     // Resource Information
 
-    // University Params
+    // University Intern
     address public university;
+    mapping(address => uint256) public authorities;
 
     // uint256 fromTimestamp;
     // uint256 toTimestamp;
@@ -41,6 +42,8 @@ contract ResourceRentalUniversity {
         university = msg.sender;
     }
 
+    function addAuthority() public {}
+
     function createBooking(
         uint256 fromTimeStampInput,
         uint256 toTimeStampInput,
@@ -55,6 +58,11 @@ contract ResourceRentalUniversity {
         require(
             (renterPermission >= resourcePermission),
             "The User is allowed to book the room"
+        );
+
+        require(
+            (fromTimeStampInput + toTimeStampInput <= maxRentTime),
+            "The booking time is above the maxRentTime"
         );
 
         emit BookingCreated(
@@ -76,6 +84,11 @@ contract ResourceRentalUniversity {
     // Modifier
 
     modifier isUniversity() {
+        require(msg.sender == university, "Caller is not owner");
+        _;
+    }
+
+    modifier isAuthority() {
         require(msg.sender == university, "Caller is not owner");
         _;
     }
