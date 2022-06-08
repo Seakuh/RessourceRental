@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-// import Web3 from "web3";
 import RootComponent from "./components/root-component";
 
 export const App: FC = () => {

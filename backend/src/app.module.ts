@@ -7,6 +7,7 @@ import { BookingsModule } from './bookings/bookings.module';
 import { DevicesModule } from './devices/devices.module';
 import { Booking } from './entities/booking.entity';
 import { RoomsModule } from './rooms/rooms.module';
+import { ResourcesModule } from './resources/resources.module';
 
 @Module({
   imports: [
@@ -14,6 +15,11 @@ import { RoomsModule } from './rooms/rooms.module';
     DevicesModule,
     RoomsModule,
     BookingsModule,
+    // EthersModule.forRoot(),
+    // Web3Module.forRoot({
+    //   name: 'eth',
+    //   url: 'http://localhost:3450',
+    // }),
 
     TypeOrmModule.forRoot({
       type: 'mysql',
@@ -25,6 +31,7 @@ import { RoomsModule } from './rooms/rooms.module';
       entities: [Booking],
       synchronize: true,
     }),
+    ResourcesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

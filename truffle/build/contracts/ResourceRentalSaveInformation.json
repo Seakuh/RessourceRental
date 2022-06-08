@@ -1,25 +1,25 @@
 {
   "contractName": "ResourceRentalSaveInformation",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Resource_Rental_Save_Information.sol\":\"ResourceRentalSaveInformation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Resource_Rental_Save_Information.sol\":{\"keccak256\":\"0x7ff4608c393c1828a4ff69d9466a8a6118ff129b68904d7a4372c392ec4ad7be\",\"urls\":[\"bzz-raw://a611ca0c8902c16a8226a688deffe850c4de3d0d0978efb85caec02f21fa8d36\",\"dweb:/ipfs/QmWsZwJhtScjsFny7omLJtjbRvGwuW8uGjuHXtP4gowjfe\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158201864ae4f3d1f354c5d733eb0cf78e26c43b1c30d05207238fe9c82186e0f044964736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158201864ae4f3d1f354c5d733eb0cf78e26c43b1c30d05207238fe9c82186e0f044964736f6c63430005100032",
-  "sourceMap": "34:726:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:726:8;;;;;;;",
-  "deployedSourceMap": "34:726:8:-;;;;;",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ResourceRentalSaveInformation.sol\":\"ResourceRentalSaveInformation\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ResourceRentalSaveInformation.sol\":{\"keccak256\":\"0x7ff4608c393c1828a4ff69d9466a8a6118ff129b68904d7a4372c392ec4ad7be\",\"urls\":[\"bzz-raw://a611ca0c8902c16a8226a688deffe850c4de3d0d0978efb85caec02f21fa8d36\",\"dweb:/ipfs/QmWsZwJhtScjsFny7omLJtjbRvGwuW8uGjuHXtP4gowjfe\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582084333f0ff22b10380c4a6efe18f773571c9e438ece2043cee29cf2a6ed7d464364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582084333f0ff22b10380c4a6efe18f773571c9e438ece2043cee29cf2a6ed7d464364736f6c63430005100032",
+  "sourceMap": "34:726:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:726:9;;;;;;;",
+  "deployedSourceMap": "34:726:9:-;;;;;",
   "source": "pragma solidity >=0.4.25 <0.7.0;\n\ncontract ResourceRentalSaveInformation {\n    // struct Resource {\n    //     uint256 deviceId;\n    //     string deviceName;\n    //     bool loanable;\n    //     uint256 loanInterval;\n    //     uint256 deviceElectricityCostPerHour;\n    //     uint256 deviceCosts;\n    //     uint256 computingPower;\n    //     bool buyOut;\n    //     uint256 appraisedValue;\n    // }\n    // struct Booking {\n    // ;\n    // }\n    // mapping(address => uint256) public previousRenter;\n    // address public owner;\n    // mapping(address => Device) public devices;\n    // event BookingCreated(\n    //     uint256 fromTimeStamp,\n    //     uint256 toTimeStamp,\n    //     address renterAddress,\n    //     Permission renterPermission\n    // );\n}\n",
-  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/Resource_Rental_Save_Information.sol",
+  "sourcePath": "/home/dizzle/Dev/RessourceRental/truffle/contracts/ResourceRentalSaveInformation.sol",
   "ast": {
-    "absolutePath": "project:/contracts/Resource_Rental_Save_Information.sol",
+    "absolutePath": "project:/contracts/ResourceRentalSaveInformation.sol",
     "exportedSymbols": {
       "ResourceRentalSaveInformation": [
-        302
+        715
       ]
     },
-    "id": 303,
+    "id": 716,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 301,
+        "id": 714,
         "literals": [
           "solidity",
           ">=",
@@ -30,7 +30,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:8"
+        "src": "0:32:9"
       },
       {
         "baseContracts": [],
@@ -38,25 +38,25 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 302,
+        "id": 715,
         "linearizedBaseContracts": [
-          302
+          715
         ],
         "name": "ResourceRentalSaveInformation",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 303,
-        "src": "34:726:8"
+        "scope": 716,
+        "src": "34:726:9"
       }
     ],
-    "src": "0:761:8"
+    "src": "0:761:9"
   },
   "legacyAST": {
     "attributes": {
-      "absolutePath": "project:/contracts/Resource_Rental_Save_Information.sol",
+      "absolutePath": "project:/contracts/ResourceRentalSaveInformation.sol",
       "exportedSymbols": {
         "ResourceRentalSaveInformation": [
-          302
+          715
         ]
       }
     },
@@ -73,9 +73,9 @@
             ".0"
           ]
         },
-        "id": 301,
+        "id": 714,
         "name": "PragmaDirective",
-        "src": "0:32:8"
+        "src": "0:32:9"
       },
       {
         "attributes": {
@@ -89,22 +89,22 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            302
+            715
           ],
           "name": "ResourceRentalSaveInformation",
           "nodes": [
             null
           ],
-          "scope": 303
+          "scope": 716
         },
-        "id": 302,
+        "id": 715,
         "name": "ContractDefinition",
-        "src": "34:726:8"
+        "src": "34:726:9"
       }
     ],
-    "id": 303,
+    "id": 716,
     "name": "SourceUnit",
-    "src": "0:761:8"
+    "src": "0:761:9"
   },
   "compiler": {
     "name": "solc",
@@ -112,7 +112,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-05-16T07:37:25.766Z",
+  "updatedAt": "2022-06-01T16:03:30.539Z",
   "devdoc": {
     "methods": {}
   },

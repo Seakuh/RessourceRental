@@ -18,15 +18,22 @@ export class BookingsService {
     throw new Error('Method not implemented.');
   }
   createBooking(createBookingDto: CreateBookingDto) {
+    // if (
+    //   this.isDeviceAvailable(
+    //     createBookingDto.fromDate,
+    //     createBookingDto.toDate,
+    //     createBookingDto.resourceId,
+    //   )
+    // ) {
+    // }
     if (
-      this.isDeviceAvailable(
-        createBookingDto.fromDate,
-        createBookingDto.toDate,
-        createBookingDto.resourceId,
-      )
+      this.isValidTimestamp(createBookingDto.fromDate) &&
+      this.isValidTimestamp(createBookingDto.toDate)
     ) {
+      return this.bookingRepository.createBooking(createBookingDto);
     }
-    return this.bookingRepository.createBooking(createBookingDto);
+
+    return 'Timestamp is not valide';
   }
 
   createRoomBooking(createRoomBookingDto: CreateRoomBookingDto) {
@@ -55,7 +62,7 @@ export class BookingsService {
 
   // internal functions ---------------------------------------------------------
 
-  isDeviceAvailable(
+  isResourceAvailable(
     fromTimestamp: number,
     toTimeStamp: number,
     deviceId: string,
@@ -64,5 +71,15 @@ export class BookingsService {
 
     console.log(bookings);
     return true;
+  }
+
+  // connectToEthers(){
+  //
+  // }
+
+  isValidTimestamp(_timestamp: number): boolean {
+    const valid = new Date(_timestamp).getTime() > 0;
+
+    return valid;
   }
 }

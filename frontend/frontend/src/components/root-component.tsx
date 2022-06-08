@@ -7,7 +7,7 @@ import CalendarComponent from "./calender-component";
 import DeviceComponent from "./device-component";
 import RoomComponent from "./room-component";
 import RoomDetailComponent from "./room-detail-component";
-
+// 528-577
 export const RootComponent: FC = () => {
   const generatedRooms = generateRooms();
 

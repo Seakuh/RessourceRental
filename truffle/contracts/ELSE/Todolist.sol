@@ -12,7 +12,6 @@ contract TodoList {
     mapping(uint256 => Task) public tasks;
 
     event TaskCreated(uint256 id, string content, bool completed);
-
     event TaskCompleted(uint256 id, bool completed);
 
     constructor() public {

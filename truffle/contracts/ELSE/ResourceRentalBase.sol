@@ -1,6 +1,6 @@
 pragma solidity ^0.5.16;
 
-contract ResourceRental {
+contract ResourceRentaBase {
     address owner;
     address currentRenter;
     uint256 fromTimestamp;
