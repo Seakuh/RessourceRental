@@ -10,3 +10,4 @@ export class ResourceRepository {
     @InjectModel(Resource.name) private ResourceModel: Model<ResourceDocument>,
   ) {}
 }
+
